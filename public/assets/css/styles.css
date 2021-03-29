@@ -7,14 +7,25 @@ h1{
     margin: 5px;
 }
 @media (min-width: 300px) {
-  .col {
+  .card {
+width: 100%;
+      background-color: blue;
   }
+    .row > .col{
+        width: 350px;
+        text-align: justify;
+          margin: 5px!important;
+    }
+
 }
 
 @media (min-width: 300px) {
   .row {
     display: block;
+      width: 100%;
+
   }
+
 }
 
 @media (min-width: 1200px) {
@@ -29,12 +40,29 @@ body {
 @media (min-width: 576px) {
   .row {
     display: flex;
+
   }
+    .row > .col{
+        width: 450px;
+        text-align: justify;
+         justify-content: center;
+       margin: 10px!important;
+
+    }
+    .card {
+        width: 100%;
+        background-color: red;
+    }
 }
 
 @media (min-width: 576px) {
   .row {
+
   }
+    .card {
+        width: 100%;
+        background-color: red;
+    }
 }
 
 .row {
@@ -48,6 +76,7 @@ body {
 @media (min-width: 576px) {
   .row.align-items-start {
   }
+
 }
 
 .row.align-items-start {
@@ -58,6 +87,11 @@ body {
   .row.align-items-start {
     display: flex;
   }
+    .card {
+        width: 100%;
+        background-color: red;
+    }
+
 }
 
 /*.fa.fa-signal {*/

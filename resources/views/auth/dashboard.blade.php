@@ -11,32 +11,32 @@
 </head>
 
 <body>
-<section class=" justify-content-center">
-    <div class="container p">
+<section class=" justify-content-center ">
+    <div class="container ">
         <div class="row align-items-start m-2">
-            <div class="col m-2" style="width: 128px;text-align: justify;">
-                <div class="card m-2">
-
+            <div class="col m-2">
+                <div class="card
+                 m-2">
                         <i class="fa fa-signal"></i>
                     <p>stages</p>
                     <p>0</p>
                 </div>
             </div>
-            <div class="col m-2" style="width: 128px;text-align: justify;">
+            <div class="col m-2" style="width: 100%;text-align: justify;">
                 <div class="card">
                     <i class="fa fa-cubes"></i>
                     <p>Total Stages</p>
                     <p>10</p>
                 </div>
             </div>
-            <div class="col m-2" style="width: 128px;text-align: justify;">
+            <div class="col m-2" style="width: 100%;text-align: justify;">
                 <div class="card">
                     <i class="fa fa-laptop"></i>
                     <p>Total points</p>
                     <p>4/5</p>
                 </div>
             </div>
-            <div class="col m-2" style="width: 128px;text-align: justify;">
+            <div class="col m-2" style="width: 100%;text-align: justify;">
                 <div class="card">
                     <i class="fa fa-laptop"></i>
                     <p>Track & courses</p>
@@ -44,8 +44,8 @@
                 </div>
             </div>
         </div>
-        <div class="row m-2">
-            <div class="col-6">
+        <div class="row m-2" >
+            <div class="col " style="width: 370px;text-align: justify;" >
                 <div class="card">
                     <h1>Recent Post</h1>
                     <table>
@@ -70,7 +70,7 @@
                     <button class="">view all Task</button>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col" style="width: 370px;text-align: justify; padding-top: 10px;">
                 <div class="card">
                     <h1>Latest task</h1>
                     <table>
