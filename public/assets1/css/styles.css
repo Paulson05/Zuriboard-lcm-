@@ -1,0 +1,161 @@
+#navcol-1 {
+  display: block;
+}
+
+.nav-item {
+}
+
+.nav-item {
+}
+
+.nav-item {
+}
+
+.nav-item {
+  display: flex;
+}
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+  margin-left: auto;
+}
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+  color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  margin-right: 20px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+  background: rgb(232,88,88);
+}
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+}
+
+.nav-item {
+  padding-top: 0;
+  position: relative;
+  top: 0;
+}
+
+.nav-item {
+}
+
+.nav-item.text-right {
+}
+
+.nav-item.text-right {
+  top: -31px;
+}
+
+.nav-item.text-center {
+  top: -31px;
+}
+
+@media (min-width: 768px) {
+  .nav-item.text-center {
+    top: 4px;
+  }
+}
+
+.navbar-light .navbar-brand {
+}
+
+.navbar-light .navbar-brand {
+}
+
+.navbar-light .navbar-brand {
+}
+
+.navbar-light .navbar-brand {
+  background-image: url(../img/zuri.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron {
+}
+
+.jumbotron {
+  background-color: rgb(245,245,245);
+}
+
+.text-center {
+  font-weight: inherit;
+}
+
+.btn:not(:disabled):not(.disabled) {
+  color: red;
+  background: none;
+  border: none;
+}
+
+.text-center {
+}
+
+@media (min-width: 1200px) {
+  .btn:not(:disabled):not(.disabled) {
+  }
+}
+
+@media (min-width: 1200px) {
+  .btn:not(:disabled):not(.disabled) {
+  }
+}
+
+.btn:not(:disabled):not(.disabled) {
+}
+
+.btn.btn-primary.disabled.text-right {
+  background: in;
+}
+
+.btn.btn-primary.disabled.text-right {
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .text-left {
+    margin-top: 33px;
+  }
+}
+
+.text-center {
+}
+
+@media (min-width: 300px) {
+  p {
+    display: inline-block;
+    padding-top: 88px;
+    padding-left: -16px;
+    padding-left: -28px;
+  }
+}
+
+@media (min-width: 1200px) {
+  p {
+    padding-left: 1px;
+    width: 100%;
+  }
+}
+
+p {
+}
+
+@media (min-width: 992px) {
+  p {
+    float: left;
+    left: 40px;
+    margin-left: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .jumbotron.text-center {
+    text-align: left;
+  }
+}
+
