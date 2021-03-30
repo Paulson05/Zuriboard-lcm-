@@ -18,10 +18,10 @@
                                 <div>
                                     <label class="block" >Email</label>
                                 </div>
-                                <input class="form-control mt-2">
-                                <label class="" style="margin: 0px;">Email</label>
+                                <input class="form-control mt-2" name="email">
+                                <label class="" style="margin: 0px;">Password</label>
 
-                                <input class="form-control mt-2 mb-2">
+                                <input class="form-control mt-2 mb-2" name="password">
 
                             </div>
                             <input type="checkbox" checked class="m-2"><span>remember me</span>

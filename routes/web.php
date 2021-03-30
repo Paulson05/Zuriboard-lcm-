@@ -21,5 +21,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('login',[AuthController::class, 'getLogin'])->name('auth.login');
+Route::post('postlogin',[AuthController::class, 'postLogin'])->name('auth.postlogin');
 Route::get('register', [AuthController::class, 'getRegister'])->name('auth.register');
+Route::post('postregister', [AuthController::class, 'postRegister'])->name('auth.postregister');
+
 Route::get('dashboard',[AuthController::class, 'dashboard'])->name('auth.dashboard');

@@ -1,7 +1,7 @@
 p,i{
     text-align: center;
     padding: 5px;
-    font-size: 10px!important;
+    font-size: 20px!important;
 }
 h1{
     margin: 5px;
@@ -15,7 +15,12 @@ width: 100%;
         width: 350px;
         text-align: justify;
           margin: 5px!important;
+
     }
+
+
+
+
 
 }
 
@@ -32,6 +37,10 @@ width: 100%;
   .row {
     display: flex;
   }
+    table,tr,td{
+        font-size: 10px;
+    }
+
 }
 
 body {
@@ -63,6 +72,7 @@ body {
         width: 100%;
         background-color: red;
     }
+
 }
 
 .row {
@@ -100,7 +110,7 @@ body {
 
 .col {
   text-align: left;
-    font-size: 10px;
+    font-size: 20px;
 
 }
 col-6, .card{
@@ -110,10 +120,10 @@ col-6, .card{
 }
 .col,h1 {
     text-align: left;
-    font-size: 10px;
+    font-size: 20px;
 }
 table{
-    font-size: 10px;
+    font-size: 7px;
 
 }
 table tr{
@@ -125,9 +135,9 @@ table tr{
 
 }
 button{
-    width: 30%;
+    width: 25%;
     border-radius: 20px;
-
+  font-size: 10px;
     margin: 10px;
     background-color: red;
     color: white;

@@ -15,8 +15,7 @@
     <div class="container ">
         <div class="row align-items-start m-2">
             <div class="col m-2">
-                <div class="card
-                 m-2">
+                <div class="card m-2">
                         <i class="fa fa-signal"></i>
                     <p>stages</p>
                     <p>0</p>
