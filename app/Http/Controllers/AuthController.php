@@ -31,7 +31,7 @@ class AuthController extends Controller
         ]);
 
 
-        $array = collect($request->only(['first_name', 'last_name', 'middle_name', 'username', 'gender', 'age', 'track', 'experience', 'employment', 'education', 'email', 'info'])->put('password', bcrypt($request->password))->put('confirmed_password', bcrypt($request->confirmed_password)))->all();
+        $array = collect($request->only(['first_name', 'last_name', 'middle_name', 'username', 'gender', 'age', 'track', 'experience', 'employment', 'education', 'email', 'info']))->put('password', bcrypt($request->password))->put('confirmed_password', bcrypt($request->confirmed_password))->all();
         Users::create($array);
         return redirect()->back()->with('info', 'your are successfully register');
     }
