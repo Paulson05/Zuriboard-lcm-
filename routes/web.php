@@ -25,4 +25,5 @@ Route::post('postlogin',[AuthController::class, 'postLogin'])->name('auth.postlo
 Route::get('register', [AuthController::class, 'getRegister'])->name('auth.register');
 Route::post('postregister', [AuthController::class, 'postRegister'])->name('auth.postregister');
 
+
 Route::get('dashboard',[AuthController::class, 'dashboard'])->name('auth.dashboard');

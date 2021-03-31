@@ -50,8 +50,12 @@
 @include('templates.partials.header')
 <body class="text-center ">
 @include('templates.partials.navbar')
+
 <div class="" style="z-index: 2; top: 0px;">
+
+
     @yield('content')
+    @include('templates.partials.alert')
 </div>
 
 </body>

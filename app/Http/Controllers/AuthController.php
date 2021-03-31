@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Users;
+use Auth;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
@@ -41,8 +42,13 @@ class AuthController extends Controller
     }
     public function postLogin(Request $request){
 
+        if (!Auth::attempt($request->only(['email', 'password']), $request->has('remember'))){
 
+            return redirect()->back()->with('info', 'could not sign you in with those details');
+        }
 
+        return redirect()->back()
+            ->with('info', 'you are successfully signed in!');
 
     }
     public function dashboard(){

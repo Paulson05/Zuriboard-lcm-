@@ -11,7 +11,9 @@
         </div>
         <div class="container">
             <div class="container-fluid  ">
-                <form>
+
+                <form method="post" action="{{route('auth.postlogin')}}">
+                    @csrf
                     <div class="card container" style="width: 40%; height: 79%; border-radius: 9px;">
                         <div class="row">
                             <div class="  col-12 mt-2" >
@@ -27,6 +29,7 @@
                             <input type="checkbox" checked class="m-2"><span>remember me</span>
 
                         </div>
+                        <button type="submit" class="btn btn-success justify-content-end " style="background-color: #880000!important;">login</button>
 
                     </div>
                 </form>
