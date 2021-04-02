@@ -53,6 +53,12 @@ public  function index(){
             ->with('info', 'you are successfully signed in!');
 
     }
+
+
+    public  function getLogout(){
+       Auth::logout();
+       return redirect()->route('home');
+    }
     public function dashboard(){
         return view('auth.dashboard');
     }

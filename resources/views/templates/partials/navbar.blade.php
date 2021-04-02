@@ -8,9 +8,13 @@
 
         <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav ml-auto">
+                @if(!Auth::check())
                 <li class="nav-item text-center" style="text-align: center;"><a class="nav-link active" href="{{route('auth.login')}}" style="width: 74px;text-align: center;border-radius: 17px;padding: 7px;">LOGIN</a><a class="nav-link" href="{{route('auth.register')}}" style="width: 93px;text-align: center;border-radius: 21px;">REGISTER</a></li>
+                @else
+                    <li class="nav-item"><a href="{{route('auth.logout')}}">log out</a>
+                @endif
                 <li class="nav-item"></li>
-                <li class="nav-item"></li>
+
             </ul>
         </div>
     </div>
