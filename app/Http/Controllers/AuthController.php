@@ -7,7 +7,9 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
-
+public  function index(){
+    return view('auth.index');
+}
 
     public  function getRegister(){
         return view('auth.register');
@@ -47,7 +49,7 @@ class AuthController extends Controller
             return redirect()->back()->with('info', 'could not sign you in with those details');
         }
 
-        return redirect()->back()
+        return redirect()->route('home')
             ->with('info', 'you are successfully signed in!');
 
     }

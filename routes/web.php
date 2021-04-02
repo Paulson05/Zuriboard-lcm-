@@ -24,6 +24,6 @@ Route::get('login',[AuthController::class, 'getLogin'])->name('auth.login');
 Route::post('postlogin',[AuthController::class, 'postLogin'])->name('auth.postlogin');
 Route::get('register', [AuthController::class, 'getRegister'])->name('auth.register');
 Route::post('postregister', [AuthController::class, 'postRegister'])->name('auth.postregister');
-
+Route::get ('index', [AuthController::class, 'index'])->name('auth.index');
 
 Route::get('dashboard',[AuthController::class, 'dashboard'])->name('auth.dashboard');
