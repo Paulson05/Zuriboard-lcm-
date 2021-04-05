@@ -261,7 +261,7 @@
         cursor: pointer;
         padding: 14px 16px;
         font-size: 17px;
-        width: 25%;
+        width: 20%;
     }
 
     .tablink:hover {
@@ -280,6 +280,8 @@
     #News {background-color: green;}
     #Contact {background-color: blue;}
     #About {background-color: orange;}
+    #About {background-color: yellow;}
+
 
 
 
