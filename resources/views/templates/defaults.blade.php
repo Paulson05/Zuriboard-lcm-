@@ -67,6 +67,8 @@
         position: absolute;
         z-index: -1;
 
+
+
     }
     #mySidenav{
         display: inline-block;
@@ -81,7 +83,7 @@
         z-index: 3; /* Stay on top */
         top: 0px;
         left: 0;
-        background-color: rgb(221, 214, 214); /* Black*/
+        /*background-color: rgb(221, 214, 214); !* Black*!*/
         overflow-x: hidden; /* Disable horizontal scroll */
         padding-top: 60px; /* Place content 60px from the top */
         transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -129,20 +131,28 @@
     .closebtn {
         position: absolute;
         top: 0;
+
+
         right: 5px;
+    color: red !important;
         font-size: 46px !important;
+        border-radius: 20px;
+      text-decoration:  none !important;
         margin-left: 50px;
     }
+
 
     /* Style page content - use ths if you want to push the page content to the right when you open the side navigation */
     #main {
         transition: margin-left .5s;
         padding: 20px;
-
         height: 100vh;
 
     }
+   .container{
 
+       margin-top: 50px !important;
+   }
     .sidebar-menu{
         background: white;
         margin-top: 1px ;
@@ -228,6 +238,10 @@
         margin: 10px;
 
     }
+  .task{
+
+  }
+
 
 
 
@@ -243,7 +257,7 @@
 
 <div class="" style="z-index: 2; top: 0px;">
 
-
+   @include('templates.partials.sidebar')
     @yield('content')
 {{--    @include('templates.partials.alert')--}}
 </div>

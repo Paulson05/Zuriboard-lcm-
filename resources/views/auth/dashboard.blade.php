@@ -1,162 +1,151 @@
-<!DOCTYPE html>
-<html>
+@extends('templates.defaults')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>user dashboard</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
+@section('content')
+    <div id="main">
+        <div class="container">
+            <div class="row">
 
-<body>
-<section class=" justify-content-center ">
-    <div class="container ">
-        <div class="row align-items-start m-2">
-            <div class="col m-2">
-                <div class="card m-2">
-                        <i class="fa fa-signal"></i>
-                    <p>stages</p>
-                    <p>0</p>
+                <div class="card card-col-3 ml-1 ">
+                    <i class="fa fa-signal" aria-hidden="true"></i>
+                    <a href="">Stages</a>
+                    <span>0</span>
                 </div>
-            </div>
-            <div class="col m-2" style="width: 100%;text-align: justify;">
-                <div class="card">
-                    <i class="fa fa-cubes"></i>
-                    <p>Total Stages</p>
-                    <p>10</p>
+
+                <div class="card card-col-3">
+                    <i class="fa fa-cubes" aria-hidden="true"></i>
+                    <a href="">Total Stages</a>
+                    <span>10</span>
                 </div>
-            </div>
-            <div class="col m-2" style="width: 100%;text-align: justify;">
-                <div class="card">
-                    <i class="fa fa-laptop"></i>
-                    <p>Total points</p>
-                    <p>4/5</p>
+                <div class="card card-col-3">
+                    <i class="fa fa-laptop" aria-hidden="true"></i>
+                    <a href="">Total points</a>
+                    <span>6/8</span>
                 </div>
-            </div>
-            <div class="col m-2" style="width: 100%;text-align: justify;">
-                <div class="card">
-                    <i class="fa fa-laptop"></i>
-                    <p>Track & courses</p>
-                    <p>BackEnd-php</p>
+                <div class="card card-col-3">
+                    <i class="fa fa-laptop" aria-hidden="true"></i>
+                    <a href="">Track & Course</a>
+                    <span>Back End-php</span>
                 </div>
+
+
             </div>
-        </div>
-        <div class="row m-2" >
-            <div class="col " style="width: 370px;text-align: justify;" >
-                <div class="card">
-                    <h1>Recent Post</h1>
-                    <table>
 
-                        <tr>
-                            <td>Title</td>
-                            <td>Author</td>
-                            <td>Category</td>
+            <div class="row">
 
-                        </tr>
-                        <hr>
+                <div class="card card-col-5">
+                    <h1 class="text-left">Recent Posts</h1>
+                    <div class="table-content">
+                        <table  class="table">
+                            <thead>
+                            <tr  class="t-row t-row-text" >
+                                <td>TITLE</td>
+                                <td>AURTHOR</td>
+                                <td>CATEGORY</td>
+                            </tr>
+                            </thead>
+                            <tbody>
 
-                        <tbody>
-
-                        <tr>
-                            <td>Design Week 3: Elements and Principles of Good Design Guide Mon 29, Mar 2021</td>
-                             <td>Charles Dim</td>
-                            <td>Design</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <button class="">view all Task</button>
-                </div>
-            </div>
-            <div class="col" style="width: 370px;text-align: justify; padding-top: 10px;">
-                <div class="card">
-                    <h1>Latest task</h1>
-                    <table>
-
-                        <tr>
-                            <td>COURSE</td>
-                            <td>TASK TITLE</td>
-                            <td>TASK POINTS</td>
-                            <td>STATUS</td>
-                            <td>DEADLINE</td>
-
-                        </tr>
-                        <hr>
-
-                        <tbody>
-
-                        <tr>
-                            <td>General Introduction General</td>
-                            <td>your cv</td>
-                            <td>1</td>
-                            <td>Grade(1)</td>
-                            <td>1 week from now</td>
-                            <td>view</td>
-                        </tr>
-                        <tr>
-                            <td>General Introduction General</td>
-                            <td>your cv</td>
-                            <td>1</td>
-                            <td>Grade(1)</td>
-                            <td>1 week from now</td>
-                            <td>view</td>
-                        </tr>
-                        <tr>
-                            <td>General Introduction General</td>
-                            <td>your cv</td>
-                            <td>1</td>
-                            <td>Grade(1)</td>
-                            <td>1 week from now</td>
-                            <td>view</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <button class="">view all Task</button>
-                </div>
-            </div>
-        </div>
-        <div class="row m-2">
-            <div class="col">
-                <div class="card">
-                    <h1>Latest task</h1>
-                    <table>
-
-                        <tr>
-                            <td>Track</td>
-                            <td>Course Name</td>
-                            <td>Description</td>
+                            <tr  >
+                                <td>Functions in Dart
+                                    Tue 30, Mar 2021</td>
+                                <td>Rhemi</td>
 
 
-                        </tr>
-                        <hr>
 
-                        <tbody>
+                            </tr>
+                            <tr >
+                                <td>Functions in Dart
+                                    Tue 30, Mar 2021</td>
+                                <td>Rhemi</td>
 
-                        <tr>
-                            <td>Back End</td>
-                            <td>PHP</td>
-                            <td>PHP Class</td>
 
-                        </tr>
-                        <tr>
-                            <td> General</td>
-                            <td>General Introduction</td>
-                            <td>General Introduction</td>
 
-                        </tr>
+                            </tr>
+                            </tbody>
 
-                        </tbody>
-                    </table>
+                        </table>
+                        <button class="show-all-post">show all post</button>
+                    </div>
 
                 </div>
+
+                <div class="card card-col-5">
+                    <h1 class="text-left">Latest Tasks</h1>
+                    <div class="table-content">
+                        <table  class="table">
+                            <thead style="width:10px !important;">
+                            <tr class="t-row-text">
+                                <td class="td">TITLE</td>
+                                <td class="td">AURTHOR</td>
+                                <td class="td">CATEGORY</td>
+                                <td class="td">TITLE</td>
+                                <td class="td">AURTHOR</td>
+                                <td class="td">CATEGORY</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="td">TITLE</td>
+                                <td class="td">AURTHOR</td>
+                                <td class="td">CATEGORY</td>
+                                <td class="td">TITLE</td>
+                                <td class="td">AURTHOR</td>
+                                <td class="td">CATEGORY</td>
+                            </tr>
+
+                            <tr>
+                                <td class="td">TITLE</td>
+                                <td class="td">AURTHOR</td>
+                                <td class="td">CATEGORY</td>
+                                <td class="td">TITLE</td>
+                                <td class="td">AURTHOR</td>
+                                <td class="td">CATEGORY</td>
+                            </tr>
+
+
+                            </tbody>
+                        </table>
+                        <button class="show-all-post">show all post</button>
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+                    <div class="card card-col-12 m-0" id="card">
+                        <h1 class="text-left">Courses Enrolled in</h1>
+                        <table class="">
+                            <thead>
+                            <tr class="t-row-text">
+                                <td>TRACK</td>
+                                <td>COURSE NAME</td>
+                                <td>DESCRIPTION</td>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            <tr class="t-row">
+
+                                <td>BACKEND</td>
+                                <td>PHP</td>
+                                <td>PHP classes</td>
+
+                            </tr>
+                            <tr class="t-row">
+
+                                <td>General</td>
+                                <td>General introduction</td>
+                                <td>General introduction</td>
+
+
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
-</section>
-
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-</body>
-
-</html>
+    @endsection

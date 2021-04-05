@@ -27,5 +27,8 @@ Route::post('postregister', [AuthController::class, 'postRegister'])->name('auth
 Route::get ('index', [AuthController::class, 'index'])->name('auth.index');
 Route::get ('logout', [AuthController::class, 'getLogout'])->name('auth.logout');
 
-
+Route::get ('posts',[AuthController::class, 'posts'])->name('auth.posts');
+ Route::get ('task', [AuthController::class, 'tasks'])->name('auth.tasks');
+ Route::get('teams',[AuthController::class, 'teams'])->name('auth.teams');
+ Route::get('userprofile', [AuthController::class, 'userProfile'])->name('auth.userprofile');
 Route::get('dashboard',[AuthController::class, 'dashboard'])->name('auth.dashboard');

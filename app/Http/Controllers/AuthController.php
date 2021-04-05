@@ -59,6 +59,23 @@ public  function index(){
        Auth::logout();
        return redirect()->route('home');
     }
+
+    public  function  tasks(){
+    return view ('auth.tasks');
+    }
+
+    public function teams(){
+    return view ('auth.teams');
+    }
+
+    public  function posts(){
+    return view ('auth.posts');
+    }
+
+    protected  function userProfile(){
+
+     return view ( 'auth.usersprofile');
+    }
     public function dashboard(){
         return view('auth.dashboard');
     }
