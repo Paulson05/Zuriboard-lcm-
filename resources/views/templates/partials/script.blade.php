@@ -24,24 +24,30 @@
         document.getElementById("main").style.marginLeft = "0";
     }
 
+    function openPage(pageName, elmnt, color) {
+        // Hide all elements with class="tabcontent" by default */
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
 
-    const tabitems = document.querySelectorAll(".tab-item");
-    const tabContentitems = document.querySelectorAll(".tab-content-item");
-    function selectItem(e){
-        removeBorder();
-        removeShow();
-        this.classList.add("tab-border");
-        const tabContentitems = document.querySelector(`#${this.id}-content`);
-        tabContentitems.classList.add("show");
+        // Remove the background color of all tablinks/buttons
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+        }
+
+        // Show the specific tab content
+        document.getElementById(pageName).style.display = "block";
+
+        // Add the specific color to the button used to open the tab content
+        elmnt.style.backgroundColor = color;
     }
-    function removeBorder(){
-        tabitems.forEach(item =>item.classList.remove("tab-border"));
-    }
-    function removeShow(){
-        tabContentitems.forEach(item =>item.classList.remove("show"));
-    }
-    tabitems.forEach(item => item.addEventListener
-    ("click", selectItem))
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+
 
 </script>
 <div></div>
