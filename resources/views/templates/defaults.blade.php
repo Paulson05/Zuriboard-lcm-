@@ -146,7 +146,7 @@
     #main {
         transition: margin-left .5s;
         padding: 20px;
-        height: 100vh;
+        height: 150vh;
 
     }
    .container{
@@ -253,14 +253,15 @@
 
     /* Style tab links */
     .tablink {
+
         background-color: #555;
         color: white;
         float: left;
         border: none;
         outline: none;
         cursor: pointer;
-        padding: 14px 16px;
-        font-size: 17px;
+        padding: 14px 3px;
+        font-size: 10px;
         width: 20%;
     }
 
@@ -280,7 +281,7 @@
     #News {background-color: green;}
     #Contact {background-color: blue;}
     #About {background-color: orange;}
-    #About {background-color: yellow;}
+    #option {background-color: yellow;}
 
 
 
@@ -289,7 +290,7 @@
 
 </style>
 @include('templates.partials.header')
-<body class="text-center ">
+<body class="text-center " style="width: 100%; height: 100%; !important;">
 @include('templates.partials.navbar')
 
 <div class="" style="z-index: 2; top: 0px;">
@@ -297,8 +298,10 @@
    @include('templates.partials.sidebar')
     @yield('content')
 {{--    @include('templates.partials.alert')--}}
+    @include('templates.partials.footer')
 </div>
  @include('templates.partials.script')
+
 </body>
 
 </html>
