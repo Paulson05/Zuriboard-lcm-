@@ -4,6 +4,7 @@
     <div id="main">
 
         <div class="container">
+
             <div class="row">
                 <div class="col-4">
                     <h1 style="font-size: 20px;">hello {{auth()->user()->getNameOrUsername()}}</h1>
@@ -12,7 +13,7 @@
             </div>
             <div class="row">
                 <div class="col-4">
-                    <h1 style="font-size: 10px;">student id: Zuri48487</h1>
+                    <h1 class="" style="font-size: 10px;">student id: {{strtoupper(auth()->user()->student_id)}}</h1>
                 </div>
 
             </div>

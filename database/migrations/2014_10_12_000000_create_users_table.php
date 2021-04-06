@@ -27,7 +27,7 @@ class CreateUsersTable extends Migration
             $table->string('education');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('confirmed_password');
+            $table->string('student_id');
             $table->string('info');
             $table->string('remember_token')->nullable();
             $table->timestamps();
