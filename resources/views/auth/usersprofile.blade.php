@@ -4,7 +4,8 @@
 
        <section id="main" style="background-color: yellow;">
            <h1 style="font-size: 10px;">Dashboard</h1>
-           <p style="font-size: 10px;">dashboard->onyebuchi  okofu's profile</p>
+           <p style="font-size: 10px;">dashboard->
+               {{  Auth::user()->getNameOrUsername()}}'s profile</p>
            <div class="row">
                <div class="col-2">
 
