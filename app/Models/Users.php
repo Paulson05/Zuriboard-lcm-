@@ -2,11 +2,14 @@
 
 namespace App\Models;
 use Auth;
+
+use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
-class Users extends Model
+use Illuminate\Contracts\Auth\Authenticatable as AuthContract;
+class Users extends Model implements AuthContract
 {
+    use Authenticatable;
     protected $table = 'users';
     protected $guarded = [];
     protected  $hidden =  ['remember_token'];

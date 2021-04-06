@@ -301,7 +301,11 @@
     @include('templates.partials.footer')
 </div>
  @include('templates.partials.script')
-
+<script>
+    $(document).ready(function (){
+        $("#openNav").click();
+    })
+</script>
 </body>
 
 </html>

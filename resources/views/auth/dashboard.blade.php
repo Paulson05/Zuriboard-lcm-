@@ -4,10 +4,9 @@
     <div id="main">
 
         <div class="container">
-
             <div class="row">
                 <div class="col-4">
-                    <h1 style="font-size: 20px;">hello {{}}</h1>
+                    <h1 style="font-size: 20px;">hello {{auth()->user()->getNameOrUsername()}}</h1>
                 </div>
 
             </div>

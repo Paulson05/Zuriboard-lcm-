@@ -2,7 +2,7 @@
 <nav class="navbar navbar-light navbar-expand-md" style="position: fixed; z-index: 2; width: 100%; padding: 9px;box-shadow: 0px 1px 3px rgb(240,240,245); ">
      @if(Auth::check())
 
-        <a> <span onclick="openNav()" class="openbtn">menu<i class="fa fa-bars"></i></span></a>
+        <a> <span id="openNav" onclick="openNav()" class="openbtn">menu<i class="fa fa-bars"></i></span></a>
 {{--        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>--}}
 
     @endif
