@@ -2,7 +2,21 @@
 
 @section('content')
     <div id="main">
+
         <div class="container">
+
+            <div class="row">
+                <div class="col-4">
+                    <h1 style="font-size: 20px;">hello {{}}</h1>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <h1 style="font-size: 10px;">student id: Zuri48487</h1>
+                </div>
+
+            </div>
             <div class="row">
 
                 <div class="card card-col-3 ml-1 ">
