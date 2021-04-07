@@ -9,7 +9,7 @@
     <div class="d-flex flex-column" id="content-wrapper">
         <div id="content">
           @include('admin.partials.sidebar')
-
+                @yield('content')
             </div>
            </div>
     <a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>

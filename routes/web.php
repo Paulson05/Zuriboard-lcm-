@@ -27,3 +27,7 @@ Route::get('dashboard',[AuthController::class, 'dashboard'])->name('auth.dashboa
 
 
 Route::get('admin/index',[AdminController::class, 'index'])->name('admin.index');
+Route::get('admin/posts', [AdminController::class, 'posts'])->name('admin.posts');
+Route::get('admin/tasks', [AdminController::class, 'tasks'])->name('admin.tasks');
+Route::get('admin/teams', [AdminController::class, 'teams'])->name('admin.teams');
+Route::get('admin/usersprofile', [AdminController::class, 'usersProfile'])->name('admin.usersprofile');

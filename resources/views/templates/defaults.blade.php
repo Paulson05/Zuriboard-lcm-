@@ -289,7 +289,7 @@
 
 
 </style>
-@include('templates.partials.header')
+@include('templates.partials.head')
 <body class="text-center " style="width: 100%; height: 100%; !important;">
 @include('templates.partials.navbar')
 
