@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Teams extends Model
 {
-    use HasFactory;
+   protected $table = 'team';
+   protected $guarded  = [];
 }

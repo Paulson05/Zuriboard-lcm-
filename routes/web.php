@@ -3,6 +3,9 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostsController;
+use App\Http\Controllers\TaskController;
+use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -27,7 +30,15 @@ Route::get('dashboard',[AuthController::class, 'dashboard'])->name('auth.dashboa
 
 
 Route::get('admin/index',[AdminController::class, 'index'])->name('admin.index');
-Route::get('admin/posts', [AdminController::class, 'posts'])->name('admin.posts');
-Route::get('admin/tasks', [AdminController::class, 'tasks'])->name('admin.tasks');
-Route::get('admin/teams', [AdminController::class, 'teams'])->name('admin.teams');
+Route::get('admin/posts', [PostsController::class, 'posts'])->name('admin.posts');
+Route::post('admin/post/posts', [PostsController::class, 'postPosts'])->name('admin.postposts');
+
+Route::get('admin/tasks', [TaskController::class, 'tasks'])->name('admin.tasks');
+Route::post('admin/post/tasks', [TaskController::class, 'postTasks'])->name('admin.posttasks');
+
+Route::get('admin/teams', [TeamController::class, 'teams'])->name('admin.teams');
+Route::post('admin/post/teams', [TeamController::class, 'postTeams'])->name('admin.postteams');
+
 Route::get('admin/usersprofile', [AdminController::class, 'usersProfile'])->name('admin.usersprofile');
+Route::post('admin/post/usersprofile', [AdminController::class, 'postUsersprofile'])->name('admin.postsusersprofile');
+

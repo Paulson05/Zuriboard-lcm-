@@ -34,7 +34,10 @@
                     <tbody>
 
                     <tr class="t-row">
-                        <td>BACKEND</td>
+                        <td>
+                            <h6>helllo</h6>
+                             <h6>google</h6>
+                        </td>
                         <td>PHP</td>
                         <td>BACKEND</td>
                         <td>PHP</td>
