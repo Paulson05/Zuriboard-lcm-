@@ -23,7 +23,7 @@
                                 <input class="form-control mt-2" name="email">
                                 <label class="" style="margin: 0px;">Password</label>
 
-                                <input class="form-control mt-2 mb-2" name="password">
+                                <input type="password" class="form-control mt-2 mb-2" name="password">
 
                             </div>
                             <input type="checkbox" checked class="m-2"><span>remember me</span>

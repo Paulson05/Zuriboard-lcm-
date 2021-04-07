@@ -92,5 +92,61 @@
 
 
     </div>
+    <div class="col-12">
+        <table class="table table-bordered table-responsive-lg">
+            <tr>
+                <th>#</th>
+                <th>course</th>
+                <th>task_title</th>
+                <th>description</th>
+                <th>task_file</th>
+                <th>task_points</th>
+                <th>time_status</th>
+                <th>submission_status</th>
 
+            </tr>
+                        @foreach($tasks as $task)
+            <tr>
+
+
+
+                <td>{{$task->id}}</td>
+                <td>{{$task->course}}</td>
+                <td>{{$task->task_title}}</td>
+                <td>{{$task->description}}</td>
+                <td>{{$task->task_file}}</td>
+                <td>{{$task->task_points}}</td>
+                <td>{{$task->time_status}}</td>
+                <td>{{$task->submission_status}}</td>
+
+
+
+                <td>
+
+
+
+
+
+                    <a href="" title="show">
+                        <i class="btn btn-danger fas fa-eye"></i>
+                    </a>
+                    <a href="" >
+                        <i class="btn btn-danger fas fa-edit" ></i>
+                    </a>
+                    <form style="display: inline-block" method="post" action="" >
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger btn-sm p-0"><i class="btn btn-danger fas fa-trash-alt" ></i></button>
+                    </form>
+
+
+
+
+
+                </td>
+
+            </tr>
+                        @endforeach
+        </table>
+    </div>
 @endsection

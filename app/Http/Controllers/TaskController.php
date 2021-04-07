@@ -8,7 +8,10 @@ use Illuminate\Http\Request;
 class TaskController extends Controller
 {
     public function tasks(){
-        return view('admin.tasks');
+        $tasks = Tasks::all();
+        return view('admin.tasks')->with([
+            'tasks' => $tasks
+        ]);
     }
     public  function postTasks(Request  $request){
         $array=collect($request->only(['course','task_title', 'description', 'task_file', 'task_points', 'time_status', 'submission_status']))->all();

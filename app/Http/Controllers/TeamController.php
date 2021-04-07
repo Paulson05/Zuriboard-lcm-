@@ -8,7 +8,10 @@ use Illuminate\Http\Request;
 class TeamController extends Controller
 {
     public function teams(){
-        return view('admin.teams');
+        $teams = Teams::all();
+        return view('admin.teams')->with([
+            'teams' => $teams
+        ]);
     }
     public  function postTeams(Request  $request){
         $array=collect($request->only(['name','description', 'max_members', 'members']))->all();

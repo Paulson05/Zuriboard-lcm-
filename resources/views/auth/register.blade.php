@@ -138,14 +138,14 @@
                                      </div>
                                      <div class="col-12 ">
                                          <label>Password</label>
-                                         <input name="password" class="form-control @error('password'){{"is-invalid"}}@enderror" value = "{{Request::old('password') ?: ''}}">
+                                         <input  type="password" name="password" class="form-control @error('password'){{"is-invalid"}}@enderror" value = "{{Request::old('password') ?: ''}}">
                                          @error('password')
                                          <span class="form-text text-danger">{{$errors->first('password')}}</span>
                                          @enderror
                                      </div>
                                      <div class="col-12 ">
                                          <label>Comfirm Password</label>
-                                         <input name="confirmed_password" class="form-control @error('confirmed_password'){{"is-invalid"}}@enderror" value = "{{Request::old('cpnfirmed_password') ?: ''}}">
+                                         <input type="password" name="confirmed_password" class="form-control @error('confirmed_password'){{"is-invalid"}}@enderror" value = "{{Request::old('cpnfirmed_password') ?: ''}}">
                                          @error('confirmed_password')
                                          <span class="form-text text-danger">{{$errors->first('confirmed_password')}}</span>
                                          @enderror
