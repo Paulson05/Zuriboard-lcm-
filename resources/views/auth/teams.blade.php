@@ -13,7 +13,7 @@
             </div>
             <div class="row">
                 <div class="col-4">
-                    <h1 style="font-size: 10px;">Dashboad->task</h1>
+                    <h1 style="font-size: 10px;">Dashboad->teams</h1>
                 </div>
 
             </div>
@@ -34,43 +34,20 @@
                     </thead>
                     <tbody>
 
-                    <tr class="t-row">
-                        <td>BACKEND</td>
-                        <td>PHP</td>
-                        <td>BACKEND</td>
-                        <td>PHP</td>
-                        <td>PHP classes</td>
-                        <td>BACKEND</td>
 
-                    </tr>
-                    <tr class="t-row">
+                    @foreach($teams as $team)
+                        <tr>
 
-                        <td>BACKEND</td>
-                        <td>PHP</td>
-                        <td>PHP classes</td>
-                        <td>BACKEND</td>
-                        <td>PHP</td>
-                        <td>PHP classes</td>
-                    </tr>
 
-                    <tr class="t-row">
-                        <td>BACKEND</td>
-                        <td>PHP</td>
-                        <td>BACKEND</td>
-                        <td>PHP</td>
-                        <td>PHP classes</td>
-                        <td>BACKEND</td>
 
-                    </tr>
-                    <tr class="t-row">
+                            <td>{{$team->id}}</td>
+                            <td>{{$team->name}}</td>
+                            <td>{{$team->description}}</td>
+                            <td>{{$team->max_members}}</td>
+                            <td>{{$team->members}}</td>
 
-                        <td>BACKEND</td>
-                        <td>PHP</td>
-                        <td>PHP classes</td>
-                        <td>BACKEND</td>
-                        <td>PHP</td>
-                        <td>PHP classes</td>
-                    </tr>
+                            <td>
+                    @endforeach
 
 
                     </tbody>

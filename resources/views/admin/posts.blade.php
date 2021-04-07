@@ -85,11 +85,6 @@
                     <td>{{$post->title_body}}</td>
                     <td>{{$post->authour}}</td>
                     <td>{{$post->category}}</td>
-
-
-
-
-
                     <td>
 
 

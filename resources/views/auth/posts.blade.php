@@ -32,20 +32,19 @@
                     </tr>
                     </thead>
                     <tbody>
-
+     @foreach($posts as $post)
                     <tr class="t-row">
                         <td>
-                            <h6>helllo</h6>
-                             <h6>google</h6>
+                            <h4 style="font-size: 10px;">{{$post->title_heading}}</h4>
+                           <h5 style="font-size: 10px;"> {{$post->title_body}}</h5>
                         </td>
-                        <td>PHP</td>
-                        <td>BACKEND</td>
-                        <td>PHP</td>
-                        <td>PHP classes</td>
+
+                        <td>{{$post->authour}}</td>
+                        <td>{{$post->category}}</td>
 
                     </tr>
 
-
+     @endforeach
                     </tbody>
                 </table>
             </div>

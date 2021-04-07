@@ -34,48 +34,20 @@
                     </tr>
                     </thead>
                     <tbody>
-
+                 @foreach($tasks as $task)
                     <tr class="t-row">
-                        <td>BACKEND</td>
-                        <td>PHP</td>
-                        <td>BACKEND</td>
-                        <td>PHP</td>
-                        <td>PHP classes</td>
-                        <td>BACKEND</td>
-                        <td>PHP</td>
-                        <td>PHP classes</td>
-                    </tr>
-                    <tr class="t-row">
-                        <td>BACKEND</td>
-                        <td>PHP</td>
-                        <td>BACKEND</td>
-                        <td>PHP</td>
-                        <td>PHP classes</td>
-                        <td>BACKEND</td>
-                        <td>PHP</td>
-                        <td>PHP classes</td>
+                        <td>{{$task->id}}</td>
+                        <td>{{$task->course}}</td>
+                        <td>{{$task->task_title}}</td>
+                        <td>{{$task->description}}</td>
+                        <td>{{$task->task_file}}</td>
+                        <td>{{$task->task_points}}</td>
+                        <td>{{$task->time_status}}</td>
+                        <td>{{$task->submission_status}}</td>
                     </tr>
 
-                    <tr class="t-row">
-                        <td>BACKEND</td>
-                        <td>PHP</td>
-                        <td>BACKEND</td>
-                        <td>PHP</td>
-                        <td>PHP classes</td>
-                        <td>BACKEND</td>
-                        <td>PHP</td>
-                        <td>PHP classes</td>
-                    </tr>
-                    <tr class="t-row">
-                        <td>BACKEND</td>
-                        <td>PHP</td>
-                        <td>BACKEND</td>
-                        <td>PHP</td>
-                        <td>PHP classes</td>
-                        <td>BACKEND</td>
-                        <td>PHP</td>
-                        <td>PHP classes</td>
-                    </tr>
+                 @endforeach
+
 
 
                     </tbody>

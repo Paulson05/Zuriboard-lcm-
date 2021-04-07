@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Http\Requests\SignUpRequest;
+use App\Models\Posts;
+use App\Models\Tasks;
+use App\Models\Teams;
 use App\Models\Users;
 use Auth;
 use Illuminate\Http\Request;
@@ -47,15 +50,24 @@ public  function index(){
     }
 
     public  function  tasks(){
-    return view ('auth.tasks');
+    $tasks = Tasks::all();
+    return view ('auth.tasks')->with([
+        'tasks' => $tasks
+    ]);
     }
 
     public function teams(){
-    return view ('auth.teams');
+        $teams = Teams::all();
+    return view ('auth.teams')->with([
+        'teams' => $teams
+    ]);
     }
 
     public  function posts(){
-    return view ('auth.posts');
+    $posts = Posts::all();
+    return view ('auth.posts')->with([
+           'posts' => $posts
+        ]);
     }
 
     protected  function userProfile(){
