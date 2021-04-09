@@ -1,7 +1,7 @@
 @extends('admin.admin')
 
 @section('content')
-    <button type="button" class="btn btn-primary  btn-sm m-3" data-toggle="modal" data-target="#myModal">
+    <button type="button"  id="btn" class="btn btn-primary  btn-sm m-3" data-toggle="modal" data-target="#myModal">
         Create Posts
     </button>
 
@@ -54,6 +54,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-8 ">
                             <button type="submit" class="btn btn-primary">Create Posts</button>
                         </div>
+
                     </form>
                 </div>
 
@@ -113,4 +114,5 @@
             @endforeach
         </table>
     </div>
+
 @endsection
