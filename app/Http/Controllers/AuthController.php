@@ -7,6 +7,8 @@ use App\Models\Tasks;
 use App\Models\Teams;
 use App\Models\Users;
 use Auth;
+use RealRashid\SweetAlert\Facades\Alert;
+
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
@@ -19,13 +21,14 @@ public  function index(){
         return view('auth.register');
     }
     public  function postRegister(SignUpRequest $request){
+        Alert::success('Success Title', 'Success Message');
 
         $rand = substr($request->first_name,0,3).rand(100000,999999).substr($request->last_name,0,3);
         $array = collect($request->validated())->forget(['confirmed_password'])
             ->put('password', bcrypt($request->password))
             ->put('student_id',$rand)->all();
         Users::create($array);
-        return redirect()->back()->with('info', 'your are successfully register');
+        return redirect()->back()->with('success', 'your are successfully register');
     }
     public function getLogin(){
 

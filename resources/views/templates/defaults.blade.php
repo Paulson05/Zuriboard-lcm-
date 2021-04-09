@@ -306,6 +306,7 @@
         $("#openNav").click();
     })
 </script>
+@include('sweetalert::alert')
 </body>
 
 </html>
