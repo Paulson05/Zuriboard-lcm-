@@ -17,7 +17,7 @@
 
     <div href="{{route('auth.posts')}}"  class="sidebar-menu">
         <i class="fa fa-file-text-o" aria-hidden="true"></i>
-        <a href="{{route('auth.posts')}}">Posts</a>
+        <a href="{{route('')}}">Posts</a>
     </div>
     <div class="sidebar-menu">
         <i class="fa fa-user" aria-hidden="true"></i>

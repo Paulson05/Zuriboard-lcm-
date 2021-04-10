@@ -7,19 +7,13 @@ use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 class PostsController extends Controller
 {
-    public function  posts(){
+
+
+    public function index(){
         $posts = Posts::all();
         return view('admin.posts')->with([
-             'posts' => $posts
+            'posts' => $posts
         ]);
-    }
-    public  function postPosts(Request  $request){
-        Alert::success('Success Title', 'Success Message');
-        $array=collect($request->only(['title_heading', 'title_body','authour', 'category']))->all();
-
-        Posts::create($array);
-        return redirect()->back()->with('success', 'post created succecfully');
-
     }
     public function show($id){
 
@@ -27,6 +21,13 @@ class PostsController extends Controller
             'id'=> $id,
 
         ]);
+    }
+    public function store(Request $request){
+        Alert::success('Success Title', 'Success Message');
+        $array=collect($request->only(['title_heading', 'title_body','authour', 'category']))->all();
+
+        Posts::create($array);
+        return redirect()->back()->with('success', 'post created succecfully');
     }
     public function edit($id)
     {

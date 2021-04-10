@@ -7,9 +7,9 @@
         <hr class="sidebar-divider my-0">
         <ul class="nav navbar-nav text-light" id="accordionSidebar">
             <li class="nav-item"><a class="nav-link active" href="{{route('admin.index')}}"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="{{route('admin.tasks')}}"><i class="fas fa-user"></i><span>Tasks</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="{{route('admin.teams')}}"><i class="fas fa-table"></i><span>Teams</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="{{route('admin.posts')}}"><i class="far fa-user-circle"></i><span>Posts</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="{{route('tasks.index')}}"><i class="fas fa-user"></i><span>Tasks</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="{{route('teams.index')}}"><i class="fas fa-table"></i><span>Teams</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="{{route('posts.index')}}"><i class="far fa-user-circle"></i><span>Posts</span></a></li>
             <li class="nav-item"><a class="nav-link" href="{{route('admin.usersprofile')}}"><i class="fas fa-user-circle"></i><span>User profile</span></a></li>
         </ul>
         <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>

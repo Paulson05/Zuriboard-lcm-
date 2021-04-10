@@ -29,16 +29,18 @@ Route::get ('posts',[AuthController::class, 'posts'])->name('auth.posts');
 Route::get('dashboard',[AuthController::class, 'dashboard'])->name('auth.dashboard');
 
 
+
+
+
 Route::get('admin/index',[AdminController::class, 'index'])->name('admin.index');
-Route::get('admin/posts', [PostsController::class, 'posts'])->name('admin.posts');
-Route::post('admin/post/posts', [PostsController::class, 'postPosts'])->name('admin.postposts');
 
-Route::get('admin/tasks', [TaskController::class, 'tasks'])->name('admin.tasks');
-Route::post('admin/post/tasks', [TaskController::class, 'postTasks'])->name('admin.posttasks');
 
-Route::get('admin/teams', [TeamController::class, 'teams'])->name('admin.teams');
-Route::post('admin/post/teams', [TeamController::class, 'postTeams'])->name('admin.postteams');
+
+
 
 Route::get('admin/usersprofile', [AdminController::class, 'usersProfile'])->name('admin.usersprofile');
 Route::post('admin/post/usersprofile', [AdminController::class, 'postUsersprofile'])->name('admin.postsusersprofile');
 
+Route::resource('posts', PostsController::class)->only(['index','store','show','update','destroy','edit',  ]);
+Route::resource('tasks', TaskController::class)->only(['index','store','show','update','destroy','edit',  ]);
+Route::resource('teams', TeamController::class)->only(['index','store','show','update','destroy','edit',  ]);

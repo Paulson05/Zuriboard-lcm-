@@ -17,7 +17,7 @@
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <form action="{{route('admin.postposts')}}" method="post" enctype= "multipart/form-data" >
+                    <form action="{{route('posts.store')}}" method="post" enctype= "multipart/form-data" >
                         @csrf
 
                         <div class="row">

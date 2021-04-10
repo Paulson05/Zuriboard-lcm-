@@ -7,13 +7,16 @@ use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 class TaskController extends Controller
 {
-    public function tasks(){
+
+
+
+    public function index(){
         $tasks = Tasks::all();
         return view('admin.tasks')->with([
             'tasks' => $tasks
         ]);
     }
-    public  function postTasks(Request  $request){
+    public  function store(Request  $request){
         Alert::success('Success Title', 'Success Message');
         $array=collect($request->only(['course','task_title', 'description', 'task_file', 'task_points', 'time_status', 'submission_status']))->all();
 
