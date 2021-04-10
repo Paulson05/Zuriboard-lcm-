@@ -1,4 +1,4 @@
-@extends('admin.admin')
+@extends('admin.index')
 
 @section('content')
     <button type="button"  id="btn" class="btn btn-primary  btn-sm m-3" data-toggle="modal" data-target="#myModal">
@@ -73,7 +73,7 @@
                 <th>Title body</th>
                 <th>Authour</th>
                 <th>category</th>
-
+                <th></th>
             </tr>
 
             @foreach($posts as $post)

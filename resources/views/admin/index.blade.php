@@ -16,6 +16,7 @@
 </div>
 @include('admin.partials.footer')
 @include('admin.partials.script')
+@include('sweetalert::alert')
 </body>
 
 </html>

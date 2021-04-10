@@ -1,4 +1,4 @@
-@extends('admin.admin')
+@extends('admin.index')
 
 @section('content')
     <button type="button" class="btn btn-primary  btn-sm m-3" data-toggle="modal" data-target="#myModal">
@@ -103,7 +103,7 @@
                 <th>task_points</th>
                 <th>time_status</th>
                 <th>submission_status</th>
-
+                 <th></th>
             </tr>
                         @foreach($tasks as $task)
             <tr>

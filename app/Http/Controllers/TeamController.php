@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Teams;
 use Illuminate\Http\Request;
-
+use Alert;
 class TeamController extends Controller
 {
     public function teams(){
@@ -14,9 +14,10 @@ class TeamController extends Controller
         ]);
     }
     public  function postTeams(Request  $request){
+        Alert::success('Success Title', 'Success Message');
         $array=collect($request->only(['name','description', 'max_members', 'members']))->all();
 
         Teams::create($array);
-        return redirect()->back()->with('info', 'your are successfully register');
+        return redirect()->back()->with('success', 'team created successful');
     }
 }

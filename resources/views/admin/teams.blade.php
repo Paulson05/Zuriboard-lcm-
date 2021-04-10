@@ -1,4 +1,4 @@
-@extends('admin.admin')
+@extends('admin.index')
 
 @section('content')
     <button type="button" class="btn btn-primary  btn-sm m-3" data-toggle="modal" data-target="#myModal">
@@ -75,7 +75,7 @@
                 <th>DESCRIPTION</th>
                 <th>Max MEMBERS</th>
                 <th>MEMBERS</th>
-
+                <th></th>
             </tr>
                         @foreach($teams as $team)
             <tr>

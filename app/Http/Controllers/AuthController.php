@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 class AuthController extends Controller
 {
 public  function index(){
+
     return view('auth.index');
 }
 
@@ -35,21 +36,22 @@ public  function index(){
         return view('auth.login');
     }
     public function postLogin(Request $request){
+        Alert::success('Success Title', 'Success Message');
 
         if (!Auth::attempt($request->only(['email', 'password']), $request->has('remember'))){
 
             return redirect()->back()->with('info', 'could not sign you in with those details');
         }
 
-        return redirect()->route('home')
-            ->with('info', 'you are successfully signed in!');
+        return redirect()->route('home')->with('danger', 'you are successfully signed in!');
 
     }
 
 
     public  function getLogout(){
+        Alert::success('Success Title', 'Success Message');
        Auth::logout();
-       return redirect()->route('home');
+       return redirect()->route('home')->with( 'success', 'logout successfully !');
     }
 
     public  function  tasks(){
