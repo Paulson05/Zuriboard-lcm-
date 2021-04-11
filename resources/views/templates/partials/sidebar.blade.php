@@ -12,12 +12,12 @@
     </div>
     <div class="sidebar-menu">
         <i class="fa fa-users" aria-hidden="true"></i>
-        <a href="{{route('auth.teams')}}">TEAMs</a>
+        <a href="{{route('teams.index')}}">TEAMs</a>
     </div>
 
-    <div href="{{route('auth.posts')}}"  class="sidebar-menu">
+    <div href="{{route('posts.index')}}"  class="sidebar-menu">
         <i class="fa fa-file-text-o" aria-hidden="true"></i>
-        <a href="{{route('')}}">Posts</a>
+        <a href="{{route('posts.index')}}">Posts</a>
     </div>
     <div class="sidebar-menu">
         <i class="fa fa-user" aria-hidden="true"></i>

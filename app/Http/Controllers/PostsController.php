@@ -11,14 +11,14 @@ class PostsController extends Controller
 
     public function index(){
         $posts = Posts::all();
-        return view('admin.posts')->with([
+        return view('admin.posts.posts')->with([
             'posts' => $posts
         ]);
     }
-    public function show($id){
+    public function show(Posts   $post){
 
-        return view ('')->with([
-            'id'=> $id,
+        return view ('admin.posts.show')->with([
+            'post'=> $post  // note id is post
 
         ]);
     }
@@ -29,6 +29,9 @@ class PostsController extends Controller
         Posts::create($array);
         return redirect()->back()->with('success', 'post created succecfully');
     }
+
+
+
     public function edit($id)
     {
 
@@ -43,8 +46,10 @@ class PostsController extends Controller
 
     }
 
-    public function destroy($id)
+    public function destroy(Request $request, Posts $post)
     {
-
+        Alert::success('Success Title', 'Success Message');
+        $post->delete();
+        return redirect()->back()->with('success', 'post deleted successfully!');
     }
 }

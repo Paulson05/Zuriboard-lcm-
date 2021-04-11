@@ -12,7 +12,7 @@ class TaskController extends Controller
 
     public function index(){
         $tasks = Tasks::all();
-        return view('admin.tasks')->with([
+        return view('admin.tasks.tasks')->with([
             'tasks' => $tasks
         ]);
     }
@@ -23,6 +23,21 @@ class TaskController extends Controller
         Tasks::create($array);
 
         return redirect()->back()->with('success', 'task created successfully');
+    }
+
+    public function destroy(Request $request, Tasks $task)
+    {
+        Alert::success('Success Title', 'Success Message');
+        $task->delete();
+        return redirect()->back()->with('success', 'task deleted!');
+    }
+
+    public function show(Tasks   $task){
+
+        return view ('admin.tasks.show')->with([
+            'task'=> $task  // note id is post
+
+        ]);
     }
 
 }

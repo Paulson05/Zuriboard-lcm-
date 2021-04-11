@@ -92,13 +92,13 @@
 
 
 
-                        <a href="" title="show">
+                        <a href="{{ route('posts.show', ['post'=>$post->id])}}" title="show">
                             <i class="btn btn-danger fas fa-eye"></i>
                         </a>
                         <a href="" >
                             <i class="btn btn-danger fas fa-edit" ></i>
                         </a>
-                        <form style="display: inline-block" method="post" action="" >
+                        <form style="display: inline-block" method="post" action="{{ route('posts.destroy',['post' => $post->id]) }}" >
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger btn-sm p-0"><i class="btn btn-danger fas fa-trash-alt" ></i></button>

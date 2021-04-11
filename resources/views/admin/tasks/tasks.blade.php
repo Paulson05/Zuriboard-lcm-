@@ -16,6 +16,9 @@
                 </div>
 
                 <!-- Modal body -->
+
+
+
                 <div class="modal-body">
                     <form action="{{route('tasks.store')}}" method="post" enctype= "multipart/form-data" >
                         @csrf
@@ -127,13 +130,13 @@
 
 
 
-                    <a href="" title="show">
+                    <a href="{{ route('tasks.show', ['task' =>$task->id])}}" title="show">
                         <i class="btn btn-danger fas fa-eye"></i>
                     </a>
                     <a href="" >
                         <i class="btn btn-danger fas fa-edit" ></i>
                     </a>
-                    <form style="display: inline-block" method="post" action="" >
+                    <form style="display: inline-block" method="post" action="{{ route('tasks.destroy',['task' => $task->id]) }}" >
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger btn-sm p-0"><i class="btn btn-danger fas fa-trash-alt" ></i></button>

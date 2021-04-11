@@ -29,12 +29,7 @@ Route::get ('posts',[AuthController::class, 'posts'])->name('auth.posts');
 Route::get('dashboard',[AuthController::class, 'dashboard'])->name('auth.dashboard');
 
 
-
-
-
 Route::get('admin/index',[AdminController::class, 'index'])->name('admin.index');
-
-
 
 
 
