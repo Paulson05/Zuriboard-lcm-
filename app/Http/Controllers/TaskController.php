@@ -25,19 +25,29 @@ class TaskController extends Controller
         return redirect()->back()->with('success', 'task created successfully');
     }
 
-    public function destroy(Request $request, Tasks $task)
-    {
-        Alert::success('Success Title', 'Success Message');
-        $task->delete();
-        return redirect()->back()->with('success', 'task deleted!');
-    }
+public  function edit(Tasks $task){
 
+    $task = Tasks::all();
+    return view ('admin.tasks.edit')->with([
+        'task'=> $task
+
+
+    ]);
+}
     public function show(Tasks   $task){
 
         return view ('admin.tasks.show')->with([
             'task'=> $task  // note id is post
 
         ]);
+    }
+
+
+    public function destroy(Request $request, Tasks $task)
+    {
+        Alert::success('Success Title', 'Success Message');
+        $task->delete();
+        return redirect()->back()->with('success', 'task deleted!');
     }
 
 }

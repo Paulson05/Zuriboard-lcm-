@@ -32,11 +32,11 @@ class PostsController extends Controller
 
 
 
-    public function edit($id)
+    public function edit(Posts $post)
     {
 
-        return view ('')->with([
-            'id'=> $id,
+        return view ('admin.posts.edit')->with([
+            'post'=> $post,
 
         ]);
     }

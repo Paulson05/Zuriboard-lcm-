@@ -19,6 +19,8 @@
         <i class="fa fa-file-text-o" aria-hidden="true"></i>
         <a href="{{route('posts.index')}}">Posts</a>
     </div>
+
+
     <div class="sidebar-menu">
         <i class="fa fa-user" aria-hidden="true"></i>
         <a href="{{route('auth.userprofile')}}">Users profile</a>

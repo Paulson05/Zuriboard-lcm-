@@ -6,7 +6,10 @@ use App\Models\Posts;
 use App\Models\Tasks;
 use App\Models\Teams;
 use App\Models\Users;
+
+use App\Notifications\TaskCompleted;
 use Auth;
+use Illuminate\Support\Carbon;
 use RealRashid\SweetAlert\Facades\Alert;
 
 use Illuminate\Http\Request;
@@ -15,6 +18,8 @@ class AuthController extends Controller
 {
 public  function index(){
 
+             $users = users::find(1);
+             Users::find(1)->nofify(new TaskCompleted);
     return view('auth.index');
 }
 

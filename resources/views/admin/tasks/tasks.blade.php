@@ -133,7 +133,7 @@
                     <a href="{{ route('tasks.show', ['task' =>$task->id])}}" title="show">
                         <i class="btn btn-danger fas fa-eye"></i>
                     </a>
-                    <a href="" >
+                    <a href="{{ route('tasks.edit', ['task' =>$task->id])}}" >
                         <i class="btn btn-danger fas fa-edit" ></i>
                     </a>
                     <form style="display: inline-block" method="post" action="{{ route('tasks.destroy',['task' => $task->id]) }}" >

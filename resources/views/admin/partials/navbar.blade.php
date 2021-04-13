@@ -9,7 +9,9 @@
             <li class="nav-item"><a class="nav-link active" href="{{route('admin.index')}}"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
             <li class="nav-item"><a class="nav-link" href="{{route('tasks.index')}}"><i class="fas fa-user"></i><span>Tasks</span></a></li>
             <li class="nav-item"><a class="nav-link" href="{{route('teams.index')}}"><i class="fas fa-table"></i><span>Teams</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="{{route('posts.index')}}"><i class="far fa-user-circle"></i><span>Posts</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="{{route('posts.index')}}"><i class="far fa-user-circle"></i><span>Posts</span></a>
+            <li class="nav-item"><a class="nav-link" href="{{route('admin.users')}}"><i class="far fa-user-circle"></i><span>Users</span></a></li>
+
             <li class="nav-item"><a class="nav-link" href="{{route('admin.usersprofile')}}"><i class="fas fa-user-circle"></i><span>User profile</span></a></li>
         </ul>
         <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>

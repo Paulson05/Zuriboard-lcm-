@@ -7,12 +7,15 @@ use App\Http\Controllers\PostsController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
+
 //use RealRashid\SweetAlert\Facades\Alert;
 
 
 //Route::get('/', function () {
 //    return view('welcome');
 //});
+
+
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('login',[AuthController::class, 'getLogin'])->name('auth.login');
@@ -23,6 +26,7 @@ Route::get ('index', [AuthController::class, 'index'])->name('auth.index');
 Route::get ('logout', [AuthController::class, 'getLogout'])->name('auth.logout');
 
 Route::get ('posts',[AuthController::class, 'posts'])->name('auth.posts');
+
  Route::get ('task', [AuthController::class, 'tasks'])->name('auth.tasks');
  Route::get('teams',[AuthController::class, 'teams'])->name('auth.teams');
  Route::get('userprofile', [AuthController::class, 'userProfile'])->name('auth.userprofile');
@@ -30,6 +34,7 @@ Route::get('dashboard',[AuthController::class, 'dashboard'])->name('auth.dashboa
 
 
 Route::get('admin/index',[AdminController::class, 'index'])->name('admin.index');
+Route::get('admin/users', [AdminController::class, 'users'])->name('admin.users');
 
 
 
