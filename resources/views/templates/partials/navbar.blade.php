@@ -17,15 +17,18 @@
                     <li class="dropdown mr-5">
                         <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                             <i class="fa fa-bell"></i>
+                            <span class="badge badge-success">{{auth()->user()->notifications->count()}}</span>
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" >
 
                             @foreach(auth()->user()->notifications as $notification)
-                                    <li><a href="#">{{$notification->data['data']}}</a></li>
+                                    <li style="color: white !important;"><a style="color: white !important; " href="#">{{$notification->data['data']}}</a></li>
                                 @endforeach
                         </ul>
 
                     <li class="nav-item"><a href="{{route('auth.logout')}}">log out</a>
+
+
                 @endif
                 <li class="nav-item"></li>
 
