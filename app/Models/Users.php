@@ -7,8 +7,11 @@ use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Auth\Authenticatable as AuthContract;
+use Illuminate\Notifications\Notifiable;
+
 class Users extends Model implements AuthContract
 {
+    use HasFactory, Notifiable;
     use Authenticatable;
     protected $table = 'users';
     protected $guarded = [];
