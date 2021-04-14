@@ -25,12 +25,14 @@ class TaskController extends Controller
         return redirect()->back()->with('success', 'task created successfully');
     }
 
-public  function edit(Tasks $task){
+public  function edit(Tasks $tasks){
 
-    $task = Tasks::all();
+
+    $tasks = Tasks::all();
+
     return view ('admin.tasks.edit')->with([
-        'task'=> $task
 
+        'tasks' => $tasks
 
     ]);
 }

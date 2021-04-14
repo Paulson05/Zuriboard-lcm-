@@ -6,6 +6,7 @@
 
                 <div class="container">
                     <div class="col-12">
+
                         <form action="" method="post" enctype= "multipart/form-data" >
                             @csrf
 
@@ -19,7 +20,7 @@
                                 <div class="col-xs-4 col-sm-4 col-md-6">
                                     <div class="form-group">
                                         <strong>Task Title</strong>
-                                        <input type="text" name="task_title" class="form-control"   value = "{{Request::old('task_title') ?: ''}}">
+                                        <input type="text" name="task_title" class="form-control" value = "{{Request::old('task_title') ?: ''}}">
                                     </div>
                                 </div>
 
@@ -45,7 +46,7 @@
                                 <div class="col-xs-4 col-sm-4 col-md-6">
                                     <div class="form-group">
                                         <strong>Task Points</strong>
-                                        <input type="text" name="task_points" class="form-control" value = "{{Request::old('task_points') ?: ''}}" >
+                                        <input type="text" name="task_points" class="form-control" value="{{$tasks->course}}" >
                                     </div>
                                 </div>
 

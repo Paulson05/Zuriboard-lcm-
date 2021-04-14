@@ -55,7 +55,7 @@ class TaskCompleted extends Notification
     public function toArray($notifiable)
     {
         return [
-            'data' => 'first notification'
+            'data' => 'this is my first notification'
         ];
     }
 }

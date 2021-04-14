@@ -18,8 +18,7 @@ class AuthController extends Controller
 {
 public  function index(){
 
-             $users = users::find(1);
-             Users::find(1)->nofify(new TaskCompleted);
+
     return view('auth.index');
 }
 

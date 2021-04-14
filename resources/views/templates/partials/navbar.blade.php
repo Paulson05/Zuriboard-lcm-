@@ -14,7 +14,17 @@
                 <li class="nav-item text-center" style="text-align: center;"><a class="nav-link active" href="{{route('auth.login')}}" style="width: 74px;text-align: center;border-radius: 17px;padding: 7px;">LOGIN</a><a class="nav-link" href="{{route('auth.register')}}" style="width: 93px;text-align: center;border-radius: 21px;">REGISTER</a></li>
                 @else
 
-                    <li class="nav-item"><a href=""><i class="fa fa-bell"></i></a>
+                    <li class="dropdown mr-5">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                            <i class="fa fa-bell"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            @foreach(auth()->user()->notifications as $notification)
+                                    <li><a href="#">{{$notification->data['data']}}</a></li>
+                                @endforeach
+                        </ul>
+
                     <li class="nav-item"><a href="{{route('auth.logout')}}">log out</a>
                 @endif
                 <li class="nav-item"></li>
