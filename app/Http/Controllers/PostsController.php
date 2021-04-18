@@ -34,7 +34,7 @@ class PostsController extends Controller
 
     public function edit(Posts $post)
     {
-
+             $post = Posts::all();
         return view ('admin.posts.edit')->with([
             'post'=> $post,
 

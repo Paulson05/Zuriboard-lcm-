@@ -80,10 +80,14 @@ public  function index(){
     }
 
     protected  function userProfile(){
-
-     return view ( 'auth.usersprofile');
+        $users = Users::all();
+     return view ( 'auth.usersprofile')->with([
+               'users' => $users
+     ]);
+     
     }
     public function dashboard(){
         return view('auth.dashboard');
     }
 }
+

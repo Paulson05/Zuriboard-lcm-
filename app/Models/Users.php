@@ -37,5 +37,8 @@ class Users extends Model implements AuthContract
     public function getFirstNameOrUsername(){
         return $this->first_name ?: $this->username;
     }
+     public function userprofile(){
+         return $this->hasOne(Userprofile::class);
+     }
 }
 

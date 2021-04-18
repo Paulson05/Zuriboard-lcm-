@@ -46,7 +46,7 @@
                                 <div class="col-xs-4 col-sm-4 col-md-6">
                                     <div class="form-group">
                                         <strong>Task Points</strong>
-                                        <input type="text" name="task_points" class="form-control" value="{{$tasks->course}}" >
+                                        <input type="text" name="task_points" class="form-control" value="" >
                                     </div>
                                 </div>
 
