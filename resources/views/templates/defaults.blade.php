@@ -285,7 +285,24 @@
 
 
 
+  .td-2{
+      color: red;
+      padding-top:10px;
+      margin-top: 10px !important;
+  }
+  .tr-2{
+      padding: 10px !important;
+      width: 80%;
+  }
 
+  .td-2-join{
+      border-radius: 20px;
+      background: rgb(199, 137, 137);
+      color: white;
+      font-size: 13px;
+      width: 80%;
+
+  }
 
 
 </style>

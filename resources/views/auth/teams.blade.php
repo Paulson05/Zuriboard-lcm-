@@ -36,17 +36,18 @@
 
 
                     @foreach($teams as $team)
-                        <tr>
+                        <tr class="tr-2" >
 
 
 
-                            <td>{{$team->id}}</td>
-                            <td>{{$team->name}}</td>
-                            <td>{{$team->description}}</td>
-                            <td>{{$team->max_members}}</td>
-                            <td>{{$team->members}}</td>
-
-                            <td>
+                            <td  class="td-2">{{$team->id}}</td>
+                            <td  class="td-2">{{$team->name}}</td>
+                            <td  class="td-2">{{$team->description}}</td>
+                            <td  class="td-2">{{$team->max_members}}</td>
+                            <td class="td-2">{{$team->members}}</td>
+                            <td> <a href="" class="td-2-join"> join</a></td>
+                              
+                        </tr>
                     @endforeach
 
 

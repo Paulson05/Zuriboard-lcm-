@@ -9,8 +9,8 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index(){
-        $users = users::find(1);
-        Users::find(1)->notify(new TaskCompleted);
+        // $users = users::find(1);
+        // Users::find(1)->notify(new TaskCompleted);
         return view('home');
     }
 }
