@@ -9,4 +9,8 @@ class Teams extends Model
 {
    protected $table = 'team';
    protected $guarded  = [];
+
+   public function join(){
+      return $this->morphMany()
+   }
 }
