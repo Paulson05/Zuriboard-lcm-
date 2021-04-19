@@ -11,6 +11,6 @@ class Teams extends Model
    protected $guarded  = [];
 
    public function join(){
-      return $this->morphMany()
+      return $this->morphMany(Jointeam::class, 'jointeam' );
    }
 }

@@ -12,7 +12,11 @@ class Jointeam extends Model
     protected $guarded  = [];
  
     
-    public function JoinTeam(){
+    public function jointeam(){
         return $this->morphTo();
+   } 
+
+   public function user(){
+       return $this->belongsTo(Users::class, 'users_id');
    }
 }
