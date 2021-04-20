@@ -80,11 +80,11 @@ public  function index(){
             // dd($teamid);
          $team = Teams::find($teamid);
 
-        //  if(Auth::user()->hasjoined($team)){
+         if(Auth::user()->join($team)){
            
-        //      return redirect()->back();
+             return redirect()->back();
              
-        //  }
+         }
 
          $team->join()->create(['users_id'=>auth()->id()]);
         

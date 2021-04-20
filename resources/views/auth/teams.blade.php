@@ -44,7 +44,7 @@
                             <td  class="td-2">{{$team->name}}</td>
                             <td  class="td-2">{{$team->description}}</td>
                             <td  class="td-2">{{$team->max_members}}</td>
-                            <td class="td-2">{{$team->members}}</td>
+                            <td class="td-2">{{ $team->join->count() }} </td>
                             <td> <a href="{{ route('auth.getjoin', ['teamid' => $team->id]) }}" class="td-2-join"> join</a></td>
                               
                         </tr>
