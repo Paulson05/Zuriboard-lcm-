@@ -40,5 +40,16 @@ class Users extends Model implements AuthContract
      public function userprofile(){
          return $this->hasOne(Userprofile::class);
      }
+        public function hasjoined(){
+                   return $this->hasMany(Teams::class, 'users_id');
+        }
+
+     public function join(Teams $teams){
+               return(bool) $teams->join
+               ->where('team_id', $teams->id)
+               ->where('team_type', get_class($teams))
+               ->where('users_id', $this->id)
+               ->count();
+     }
 }
 

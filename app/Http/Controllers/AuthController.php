@@ -6,6 +6,8 @@ use App\Models\Posts;
 use App\Models\Tasks;
 use App\Models\Teams;
 use App\Models\Users;
+use App\Models\Jointeams;
+
 
 use App\Notifications\TaskCompleted;
 use Auth;
@@ -71,6 +73,26 @@ public  function index(){
         'teams' => $teams
     ]);
     }
+  
+
+   public function getJoin($teamid){
+         
+            // dd($teamid);
+         $team = Teams::find($teamid);
+
+        //  if(Auth::user()->hasjoined($team)){
+           
+        //      return redirect()->back();
+             
+        //  }
+
+         $team->join()->create(['users_id'=>auth()->id()]);
+        
+       
+        //  $status->likes()->create(['user_id'=>auth()->id()]);
+         return redirect()->back();
+         
+   }
 
     public  function posts(){
     $posts = Posts::all();

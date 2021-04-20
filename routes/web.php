@@ -29,6 +29,8 @@ Route::get ('auth/posts',[AuthController::class, 'posts'])->name('auth.posts');
 
  Route::get ('auth/task', [AuthController::class, 'tasks'])->name('auth.tasks');
  Route::get('auth/teams',[AuthController::class, 'teams'])->name('auth.teams');
+ Route::get('auth/{teamid}/teams',[AuthController::class, 'getJoin'])->name('auth.getjoin');
+
  Route::get('userprofile', [AuthController::class, 'userProfile'])->name('auth.userprofile');
 Route::get('dashboard',[AuthController::class, 'dashboard'])->name('auth.dashboard');
 
