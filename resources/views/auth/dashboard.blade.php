@@ -22,7 +22,12 @@
                 <div class="card card-col-3 ml-1 ">
                     <i class="fa fa-signal" aria-hidden="true"></i>
                     <a href="">Stages</a>
-                    <span>0</span>
+                   
+                  
+                   @foreach($stages as $stage)
+                   <span>{{$stage->stage}}</span>
+                   @endforeach
+                
                 </div>
 
                 <div class="card card-col-3">
@@ -38,7 +43,7 @@
                 <div class="card card-col-3">
                     <i class="fa fa-laptop" aria-hidden="true"></i>
                     <a href="">Track & Course</a>
-                    <span>Back End-php</span>
+                    <span>{{auth()->user()->track}}</span>
                 </div>
 
 

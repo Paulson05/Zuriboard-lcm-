@@ -7,6 +7,7 @@ use App\Models\Tasks;
 use App\Models\Teams;
 use App\Models\Users;
 use App\Models\Jointeams;
+use App\Models\Stages;
 
 
 use App\Notifications\TaskCompleted;
@@ -19,8 +20,7 @@ use Illuminate\Http\Request;
 class AuthController extends Controller
 {
 public  function index(){
-
-
+        
     return view('auth.index');
 }
 
@@ -69,8 +69,10 @@ public  function index(){
 
     public function teams(){
         $teams = Teams::all();
+        $user = Users::first();
     return view ('auth.teams')->with([
-        'teams' => $teams
+        'teams' => $teams,
+        'user' => $user
     ]);
     }
   
@@ -89,7 +91,6 @@ public  function index(){
          $team->join()->create(['users_id'=>auth()->id()]);
         
        
-        //  $status->likes()->create(['user_id'=>auth()->id()]);
          return redirect()->back();
          
    }
@@ -101,7 +102,7 @@ public  function index(){
         ]);
     }
 
-    protected  function userProfile(){
+    public  function userProfile(){
         $users = Users::all();
      return view ( 'auth.usersprofile')->with([
                'users' => $users
@@ -109,7 +110,11 @@ public  function index(){
      
     }
     public function dashboard(){
-        return view('auth.dashboard');
+             
+        $stages = Stages::all();
+        return view('auth.dashboard')->with([
+            'stages' => $stages
+        ]);
     }
 }
 

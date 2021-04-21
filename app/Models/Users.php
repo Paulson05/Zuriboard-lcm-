@@ -51,5 +51,9 @@ class Users extends Model implements AuthContract
                ->where('users_id', $this->id)
                ->count();
      }
+
+     public function teams(){
+        return $this->belongsToMany(Teams::class, 'jointeam', 'users_id', 'team_id');
+     }
 }
 

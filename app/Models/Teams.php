@@ -13,4 +13,8 @@ class Teams extends Model
    public function join(){
       return $this->morphMany(Jointeams::class, 'team' );
    }
+
+   public function user(){
+      return $this->belongsToMany( Users::class);
+   }
 }

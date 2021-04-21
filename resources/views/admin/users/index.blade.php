@@ -16,12 +16,8 @@
                 <th>task_points</th>
                 <th>time_status</th>
                 <th>submission_status</th>
-                <th>course</th>
-                <th>task_title</th>
-                <th>description</th>
-                <th>task_file</th>
-                <th>task_points</th>
-                <th>time_status</th>
+               
+               
 
                 <th></th>
             </tr>
@@ -35,16 +31,13 @@
                     <td>{{$user->first_name}}</td>
                     <td>{{$user->middle_name}}</td>
                     <td>{{$user->username}}</td>
-                    <td>{{$user->gender}}</td>
-                    <td>{{$user->age}}</td>
+                    
                     <td>{{$user->track}}</td>
-                    <td>{{$user->experience}}</td>
-                    <td>{{$user->employment}}</td>
-                    <td>{{$user->education}}</td>
+             
                     <td>{{$user->email}}</td>
-                    <td>{{$user->password}}</td>
+               
                     <td>{{$user->student_id}}</td>
-                    <td>{{$user->info}}</td>
+                 
 
 
 

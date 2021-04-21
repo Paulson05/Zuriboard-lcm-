@@ -10,8 +10,8 @@ class TeamController extends Controller
 {
     public function index(){
         $teams = Teams::all();
-        return view('admin.teams.index
-        ')->with([
+        return view('admin.teams.index')
+        ->with([ 
             'teams' => $teams
         ]);
     }

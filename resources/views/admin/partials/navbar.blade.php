@@ -10,6 +10,8 @@
             <li class="nav-item"><a class="nav-link" href="{{route('tasks.index')}}"><i class="fas fa-user"></i><span>Tasks</span></a></li>
             <li class="nav-item"><a class="nav-link" href="{{route('teams.index')}}"><i class="fas fa-table"></i><span>Teams</span></a></li>
             <li class="nav-item"><a class="nav-link" href="{{route('posts.index')}}"><i class="far fa-user-circle"></i><span>Posts</span></a>
+            <li class="nav-item"><a class="nav-link" href="{{route('stages.index')}}"><i class="far fa-user-circle"></i><span>Stages</span></a>
+
             <li class="nav-item"><a class="nav-link" href="{{route('admin.users')}}"><i class="far fa-user-circle"></i><span>Users</span></a></li>
 
             <li class="nav-item"><a class="nav-link" href="{{route('admin.usersprofile')}}"><i class="fas fa-user-circle"></i><span>User profile</span></a></li>
