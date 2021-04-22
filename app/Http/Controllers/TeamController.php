@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Posts;
 use App\Models\Teams;
+use App\Models\Users;
+
 use Illuminate\Http\Request;
 use Alert;
 class TeamController extends Controller
@@ -35,5 +37,13 @@ class TeamController extends Controller
         Alert::success('Success Title', 'Success Message');
         $team->delete();
         return redirect()->back()->with('success', 'team deleted sucessfully!');
+    }
+
+    public function teamMember(Teams $id){
+    
+        return view('auth.teammember')->with([
+            'users' => $id->users()->get(),
+
+        ]);
     }
 }

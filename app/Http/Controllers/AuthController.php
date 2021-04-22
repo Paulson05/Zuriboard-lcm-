@@ -19,13 +19,18 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
-public  function index(){
-        
-    return view('auth.index');
-}
+// public  function index(){
+//     $stages = Stages::all();
+//     return view('auth.dashboard')->with([
+//         'stages' => $stages
+//     ]);
+// }
 
     public  function getRegister(){
-        return view('auth.register');
+          $user = Users::all();
+        return view('auth.register')->with([
+            'user' => $user
+        ]);
     }
     public  function postRegister(SignUpRequest $request){
         Alert::success('Success Title', 'Success Message');
@@ -69,11 +74,19 @@ public  function index(){
 
     public function teams(){
         $teams = Teams::all();
-        $user = Users::first();
+        $users = Users::all();
     return view ('auth.teams')->with([
         'teams' => $teams,
-        'user' => $user
+        'users' => $users
     ]);
+    }
+
+    public function teamMember(Team $id){
+        
+        return view ('auth.teammember')->with([
+            'users' => $id->users()->get(),
+
+        ]);
     }
   
 

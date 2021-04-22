@@ -86,7 +86,9 @@
                 <td>{{$team->name}}</td>
                 <td>{{$team->description}}</td>
                 <td>{{$team->max_members}}</td>
-                <td>{{$team->members}}</td>
+               
+                <td class="td-2">{{ $team->join->count() }} </td>
+
 
 
 

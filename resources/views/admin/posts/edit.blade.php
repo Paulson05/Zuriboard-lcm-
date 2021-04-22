@@ -13,7 +13,7 @@
                             <div class="col-xs-4 col-sm-4 col-md-6">
                                 <div class="form-group">
                                     <strong>TITLE Heading</strong>
-                                    <input type="text" name="title_heading" class="form-control" value="{{$post->title_heading}}"  >
+                                    <input type="text" name="title_heading" class="form-control"  >
                                 </div>
                             </div>
                             <div class="col-xs-4 col-sm-4 col-md-6">

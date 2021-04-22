@@ -27,6 +27,8 @@ Route::get ('index', [AuthController::class, 'index'])->name('auth.index');
 Route::get ('logout', [AuthController::class, 'getLogout'])->name('auth.logout');
 
 Route::get ('auth/posts',[AuthController::class, 'posts'])->name('auth.posts');
+Route::get ('auth/teammember/{id}',[TeamController::class, 'teamMember'])->name('auth.teammember');
+
 
  Route::get ('auth/task', [AuthController::class, 'tasks'])->name('auth.tasks');
  Route::get('auth/teams',[AuthController::class, 'teams'])->name('auth.teams');

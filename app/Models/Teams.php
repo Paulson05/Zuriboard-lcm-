@@ -2,6 +2,8 @@
 
 namespace App\Models;
 use App\Models\Jointeams;
+use App\Models\Users;
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -14,7 +16,9 @@ class Teams extends Model
       return $this->morphMany(Jointeams::class, 'team' );
    }
 
-   public function user(){
-      return $this->belongsToMany( Users::class);
+   public function users(){
+      return $this->belongsToMany( Users::class,'jointeam','team_id','users_id');
    }
+
+   
 }

@@ -11,13 +11,15 @@
                 </div>
 
             </div>
+            
             <div class="row">
                 <div class="col-4">
                     <h1 style="font-size: 10px;">Dashboad->teams</h1>
-              
-                    <span>{{auth()->user()->teams->name}}</span><a href="">view team member</a>
+                
+                    <span>{{auth()->user()->teams()->first()->name}}</span><a href="{{ route('auth.teammember',['id'=>auth()->user()->teams()->first()->id]) }}">view team member</a>
+                 
 
-                   
+                  
                 </div>
 
             </div>
