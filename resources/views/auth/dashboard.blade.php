@@ -60,26 +60,28 @@
                                 <td>TITLE</td>
                                 <td>AURTHOR</td>
                                 <td>CATEGORY</td>
+                                <td></td>
                             </tr>
                             </thead>
                             <tbody>
-
+                                @foreach($posts as $post)
                             <tr  >
-                                <td>Functions in Dart
-                                    Tue 30, Mar 2021</td>
-                                <td>Rhemi</td>
+                                <td>
+                                    <h4 style="font-size: 10px;">{{$post->title_heading}}</h4>
+                                   <h5 style="font-size: 10px;"> {{$post->title_body}}</h5>
+                                </td>
+                                <td>{{$post->authour}}</td>
+                               
+        
+                                <td >{{$post->category}}</td>
+                                <td> <i class="btn btn-danger fas fa-eye"></i></td>
+        
 
 
 
                             </tr>
-                            <tr >
-                                <td>Functions in Dart
-                                    Tue 30, Mar 2021</td>
-                                <td>Rhemi</td>
-
-
-
-                            </tr>
+                            @endforeach
+                            
                             </tbody>
 
                         </table>

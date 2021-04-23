@@ -123,10 +123,11 @@ class AuthController extends Controller
      
     }
     public function dashboard(){
-             
+        $posts = Posts::all();
         $stages = Stages::all();
         return view('auth.dashboard')->with([
-            'stages' => $stages
+            'stages' => $stages,
+            'posts' => $posts
         ]);
     }
 }

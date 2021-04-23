@@ -22,10 +22,10 @@
                 <table class="">
                     <thead>
                     <tr class="t-row-text">
-                        <td>TRACK</td>
-                        <td>COURSE NAME</td>
-                        <td>DESCRIPTION</td>
-                        <td>TRACK</td>
+                        <td>TITLE</td>
+                        <td>AUTHOUR</td>
+                        <td>DATE</td>
+                        <td>CATEGORY</td>
                         <td></td>
 
 
@@ -38,13 +38,16 @@
                             <h4 style="font-size: 10px;">{{$post->title_heading}}</h4>
                            <h5 style="font-size: 10px;"> {{$post->title_body}}</h5>
                         </td>
-
                         <td>{{$post->authour}}</td>
-                        <td>{{$post->category}}</td>
+                        <td>{{$post->created_at}}</td>
+
+                        <td><p  style="border-radius: 10px !important; border:1px solid rgb(12, 11, 11); margin:2px;">{{$post->category}}</p></td>
+                        <td> <i class="btn btn-danger fas fa-eye"></i></td>
 
                     </tr>
 
      @endforeach
+     
                     </tbody>
                 </table>
             </div>

@@ -39,7 +39,7 @@ class TeamController extends Controller
         return redirect()->back()->with('success', 'team deleted sucessfully!');
     }
 
-    public function teamMember(Teams $id){
+    public function teamMembers(Teams $id){
     
         return view('auth.teammember')->with([
             'users' => $id->users()->get(),

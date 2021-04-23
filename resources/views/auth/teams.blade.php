@@ -16,7 +16,7 @@
                 <div class="col-4">
                     <h1 style="font-size: 10px;">Dashboad->teams</h1>
                 
-                    <span>{{auth()->user()->teams()->first()->name}}</span><a href="{{ route('auth.teammember',['id'=>auth()->user()->teams()->first()->id]) }}">view team member</a>
+                    <span style="margin-right: 10px !important;">your team{{auth()->user()->teams()->first()->name}}</span>|<a style="margin-left: 10px; font-size:10px;" href="{{ route('auth.teammember',['id'=>auth()->user()->teams()->first()->id]) }}">view other members team member</a>
                  
 
                   
