@@ -60,7 +60,6 @@
                                 <td>TITLE</td>
                                 <td>AURTHOR</td>
                                 <td>CATEGORY</td>
-                                <td></td>
                             </tr>
                             </thead>
                             <tbody>
@@ -85,7 +84,10 @@
                             </tbody>
 
                         </table>
-                        <button class="show-all-post">show all post</button>
+                        <a class="show-all-post" href="{{ route('auth.posts')}}" >
+                           
+                            show all post
+                        </a>
                     </div>
 
                 </div>
