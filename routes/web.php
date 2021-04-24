@@ -45,6 +45,11 @@ Route::get('admin/users', [AdminController::class, 'users'])->name('admin.users'
 
 Route::get('admin/usersprofile', [AdminController::class, 'usersProfile'])->name('admin.usersprofile');
 Route::post('admin/post/usersprofile', [AdminController::class, 'postUsersprofile'])->name('admin.postsusersprofile');
+Route::get('admin/track', [AdminController::class, 'track'])->name('admin.track');
+Route::post('admin/post/track', [AdminController::class, 'postTrack'])->name('admin.posttrack');
+
+
+
 
 Route::resource('posts', PostsController::class)->only(['index','store','show','update','destroy','edit',  ]);
 Route::resource('tasks', TaskController::class)->only(['index','store','show','update','destroy','edit',  ]);

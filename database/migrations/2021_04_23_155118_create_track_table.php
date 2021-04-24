@@ -15,7 +15,7 @@ class CreateTrackTable extends Migration
     {
         Schema::create('track', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
+            $table->string('track_name');
             $table->timestamps();
         });
     }

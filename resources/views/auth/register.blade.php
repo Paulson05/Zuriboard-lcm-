@@ -88,10 +88,10 @@
 
                                     <select name="experience" class="form-control @error('experience'){{"is-invalid"}}@enderror" value = "{{Request::old('experience') ?: ''}}">
                                         <option value="">---Select Experience---</option>
-                                        <option value="none">None</option>
-                                        <option value="beginer">Beginner</option>
-                                        <option value="mid-level">Mid-level</option>
-                                        <option value="expert">Expert></option>
+                                        @foreach($tracks as $track)
+                                        
+                                        <option value="{{$track->id }}">{{ $track->track_name }}</option>
+                                        @endforeach
                                     </select>
                                     @error('experience')
                                     <span class="form-text text-danger">{{$errors->first('experience')}}</span>
@@ -192,5 +192,8 @@
 
             </div>
    </div>
+   @foreach($tracks as $track)
+   <p>{{ $track->track_name }}</p>
+   @endforeach
         </div>
 @endsection

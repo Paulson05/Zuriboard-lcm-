@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tracks extends Model
 {
-    use HasFactory;
+    protected $table = 'track';
+    protected $guarded  = [];
 }

@@ -6,6 +6,8 @@ use App\Models\Posts;
 use App\Models\Tasks;
 use App\Models\Teams;
 use App\Models\Users;
+use App\Models\Tracks;
+
 use App\Models\Jointeams;
 use App\Models\Stages;
 
@@ -28,8 +30,10 @@ class AuthController extends Controller
 
     public  function getRegister(){
           $user = Users::all();
+          $tracks = Tracks::all();
         return view('auth.register')->with([
-            'user' => $user
+            'user' => $user, 
+            'tracks' => $tracks
         ]);
     }
     public  function postRegister(SignUpRequest $request){
@@ -122,6 +126,8 @@ class AuthController extends Controller
      ]);
      
     }
+
+    
     public function dashboard(){
         $posts = Posts::all();
         $stages = Stages::all();
