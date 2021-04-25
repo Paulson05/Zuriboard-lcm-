@@ -29,22 +29,47 @@
                             </div>
                             <div class="col-xs-4 col-sm-4 col-md-6">
                                 <div class="form-group">
-                                    <strong>TITLE  Body</strong>
-                                    <input type="text" name="title_body" class="form-control" >
+                                    <strong>Track id</strong>
+                                    <input type="text" name="track_id" class="form-control" >
                                 </div>
                             </div>
                             <div class="col-xs-4 col-sm-4 col-md-6">
                                 <div class="form-group">
                                     <strong>AUTHOUR</strong>
-                                    <input type="text" name="authour" class="form-control">
+                                    <input type="text" name="task_point" class="form-control">
                                 </div>
                             </div>
                             <div class="col-xs-4 col-sm-4 col-md-6">
                                 <div class="form-group">
                                     <strong>Category</strong>
-                                    <input type="text" name="category" class="form-control">
+                                    <input type="text" name="status" class="form-control">
                                 </div>
                             </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <strong>Body</strong>
+                                    <input type="text" name="deadline" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <strong>Body</strong>
+                                    <input type="text" name="title_body" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <strong>Body</strong>
+                                    <input type="text" name="title_body" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <strong>Body</strong>
+                                    <input type="text" name="title_body" class="form-control">
+                                </div>
+                            </div>
+                            
 
 
                         </div>
@@ -73,7 +98,7 @@
                 <th>Title body</th>
                 <th>Authour</th>
                 <th>category</th>
-                <th></th>
+                <th>track_id</th>
             </tr>
 
             @foreach($posts as $post)
@@ -86,8 +111,8 @@
                     <td>{{$post->title_body}}</td>
                     <td>{{$post->authour}}</td>
                     <td>{{$post->category}}</td>
-                    <td>
-
+                    <td>{{ $post->track_id }}</td>
+                     <td>
 
 
 
@@ -95,7 +120,7 @@
                         <a href="{{ route('posts.show', ['post'=>$post->id])}}" title="show">
                             <i class="btn btn-danger fas fa-eye"></i>
                         </a>
-                        {{$post->category}}
+                        
                         <form style="display: inline-block" method="post" action="{{ route('posts.destroy',['post' => $post->id]) }}" >
                             @csrf
                             @method('DELETE')

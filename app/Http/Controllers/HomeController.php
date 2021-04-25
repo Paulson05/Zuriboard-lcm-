@@ -15,10 +15,13 @@ class HomeController extends Controller
         // $users = users::find(1);
         // Users::find(1)->notify(new TaskCompleted);
         $stages = Stages::all();
-        $posts = Posts::all();
+
+        $posts = Posts::where('track_id',auth()->user()->track_id)->get();
+        $allposts = Posts::all();
         return view('home')->with([
             'stages' => $stages,
-            'posts' => $posts
+            'posts' => $posts,
+            'allposts' => $allposts
         ]);
     }
 }

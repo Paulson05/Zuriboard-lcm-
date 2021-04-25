@@ -52,6 +52,7 @@
             <tr>
                 <th>#</th>
                 <th>Tracks</th>
+                <th>All Tracks</th>
                 
                
             </tr>

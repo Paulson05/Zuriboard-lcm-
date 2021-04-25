@@ -24,7 +24,7 @@ class PostsController extends Controller
     }
     public function store(Request $request){
         Alert::success('Success Title', 'Success Message');
-        $array=collect($request->only(['title_heading', 'title_body','authour', 'category']))->all();
+        $array=collect($request->only(['title_heading', 'title_body','authour', 'category', 'track_id']))->all();
 
         Posts::create($array);
         return redirect()->back()->with('success', 'post created succecfully');

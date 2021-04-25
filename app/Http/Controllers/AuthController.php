@@ -116,6 +116,7 @@ class AuthController extends Controller
     $posts = Posts::all();
     return view ('auth.posts')->with([
            'posts' => $posts
+        
         ]);
     }
 

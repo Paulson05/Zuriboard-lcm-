@@ -43,7 +43,7 @@
                 <div class="card card-col-3">
                     <i class="fa fa-laptop" aria-hidden="true"></i>
                     <a href="">Track & Course</a>
-                    <span>{{auth()->user()->track}}</span>
+                    <span>{{auth()->user()->track()->first()->track_name}}</span>
                 </div>
 
 
@@ -56,24 +56,30 @@
                     <div class="table-content">
                         <table  class="table">
                             <thead>
+                               
                             <tr  class="t-row t-row-text" >
+                               
                                 <td>TITLE</td>
                                 <td>AURTHOR</td>
                                 <td>CATEGORY</td>
                             </tr>
                             </thead>
                             <tbody>
-                                @foreach($posts as $post)
+                               
+                                @foreach($allposts as $post)
                             <tr  >
+                              
                                 <td>
+                                   
                                     <h4 style="font-size: 10px;">{{$post->title_heading}}</h4>
                                    <h5 style="font-size: 10px;"> {{$post->title_body}}</h5>
+                                   <h2  style="font-size: 10px;">{{date ('M j, Y ', strtotime($post->created_at))}}</h2>
                                 </td>
                                 <td>{{$post->authour}}</td>
                                
         
                                 <td >{{$post->category}}</td>
-                                <td> <i class="btn btn-danger fas fa-eye"></i></td>
+                               
         
 
 
@@ -98,34 +104,36 @@
                         <table  class="table">
                             <thead style="width:10px !important;">
                             <tr class="t-row-text">
-                                <td class="td">TITLE</td>
-                                <td class="td">AURTHOR</td>
-                                <td class="td">CATEGORY</td>
-                                <td class="td">TITLE</td>
-                                <td class="td">AURTHOR</td>
-                                <td class="td">CATEGORY</td>
+                                <td class="td">COURSE</td>
+                                <td class="td">TASK TITLE</td>
+                                <td class="td">TASK POINT</td>
+                                <td class="td">STATUS</td>
+                                <td class="td">DEADLINE</td>
+                                <td class="td">....</td>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td class="td">TITLE</td>
-                                <td class="td">AURTHOR</td>
-                                <td class="td">CATEGORY</td>
-                                <td class="td">TITLE</td>
-                                <td class="td">AURTHOR</td>
-                                <td class="td">CATEGORY</td>
+                                <td>
+                                    <h1 style="font-size: 10px; color:red;">PHP</h1>
+                                </td>
+                                @foreach($posts as $post)
+                            <tr  >
+                                <td>
+                                    <h4 style="font-size: 10px;">{{$post->title_heading}}</h4>
+                                   <h5 style="font-size: 10px;">bacend</h5>
+                                </td>
+                                <td>{{$post->authour}}</td>
+                               
+        
+                                <td >{{$post->category}}</td>
+                                <td> <i class="btn btn-danger fas fa-eye"></i></td>
+        
+
+
+
                             </tr>
-
-                            <tr>
-                                <td class="td">TITLE</td>
-                                <td class="td">AURTHOR</td>
-                                <td class="td">CATEGORY</td>
-                                <td class="td">TITLE</td>
-                                <td class="td">AURTHOR</td>
-                                <td class="td">CATEGORY</td>
-                            </tr>
-
-
+                            @endforeach
+                            
                             </tbody>
                         </table>
                         <button class="show-all-post">show all post</button>

@@ -30,7 +30,7 @@ class SignUpRequest extends FormRequest
             'username' => 'required|max:300',
             'gender' => 'required',
             'age' => 'required',
-            'track' => 'required',
+            'track_id' => 'required',
             'experience' => 'required',
             'employment' => 'required',
             'education' => 'required',

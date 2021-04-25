@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('username');
             $table->string('gender');
             $table->string('age');
-            $table->string('track');
+            $table->bigInteger('track_id');
             $table->string('experience');
             $table->string('employment');
             $table->string('education');

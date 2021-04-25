@@ -71,12 +71,12 @@
                                 </div>
                                 <div class="  col-6 " >
                                     <label>Track</label>
-                                    <select name="track" class="form-control @error('track'){{"is-invalid"}}@enderror" value = "{{Request::old('track') ?: ''}}">
+                                    <select name="track_id" class="form-control @error('track'){{"is-invalid"}}@enderror" value = "{{Request::old('track') ?: ''}}">
                                         <option value="">---Select a Track---</option>
-                                        <option value="frontend">Front END</option>
-                                        <option value="backend">Back End</option>
-                                        <option value="design">Design</option>
-                                        <option value="mobile">Mobile</option>
+                                        @foreach($tracks as $track)
+                                        
+                                        <option value="{{$track->id }}">{{ $track->track_name }}</option>
+                                        @endforeach
                                         @error('track')
                                         <span class="form-text text-danger">{{$message}}</span>
                                         @enderror
@@ -88,10 +88,10 @@
 
                                     <select name="experience" class="form-control @error('experience'){{"is-invalid"}}@enderror" value = "{{Request::old('experience') ?: ''}}">
                                         <option value="">---Select Experience---</option>
-                                        @foreach($tracks as $track)
-                                        
-                                        <option value="{{$track->id }}">{{ $track->track_name }}</option>
-                                        @endforeach
+                                        <option value="none">None</option>
+                                        <option value="beginer">Beginner</option>
+                                        <option value="mid-level">Mid-level</option>
+                                        <option value="expert">Expert></option>
                                     </select>
                                     @error('experience')
                                     <span class="form-text text-danger">{{$errors->first('experience')}}</span>
@@ -192,8 +192,5 @@
 
             </div>
    </div>
-   @foreach($tracks as $track)
-   <p>{{ $track->track_name }}</p>
-   @endforeach
         </div>
 @endsection

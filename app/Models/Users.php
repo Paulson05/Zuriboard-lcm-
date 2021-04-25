@@ -43,7 +43,7 @@ class Users extends Model implements AuthContract
         public function hasjoined(){
                    return $this->hasMany(Teams::class, 'users_id');
         }
-
+   
      public function join(Teams $teams){
                return(bool) $teams->join
                ->where('team_id', $teams->id)
@@ -55,5 +55,11 @@ class Users extends Model implements AuthContract
      public function teams(){
         return $this->belongsToMany(Teams::class, 'jointeam', 'users_id', 'team_id');
  }
+
+
+ public function track(){
+    return $this->belongsTo(Tracks::class,'track_id');  //   get track for auth users
+}
+
 }
 
