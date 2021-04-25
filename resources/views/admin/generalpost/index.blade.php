@@ -29,7 +29,7 @@
                             </div>
                             <div class="col-xs-4 col-sm-4 col-md-6">
                                 <div class="form-group">
-                                    <strong>Track file</strong>
+                                    <strong>Track Titile</strong>
                                     <input type="text" name="task_title" class="form-control" >
                                 </div>
                             </div>
@@ -65,7 +65,7 @@
 
     </div>
     <div class="col-12">
-        {{--  <table class="table table-bordered table-responsive-lg">
+        <table class="table table-bordered table-responsive-lg">
             <tr>
                 <th>#</th>
                 <th>Tittle heading</th>
@@ -75,23 +75,22 @@
                 <th>track_id</th>
             </tr>
 
-            @foreach($posts as $post)
+            @foreach($generalposts as $post)
                 <tr>
 
 
 
                     <td>{{$post->id}}</td>
-                    <td>{{$post->title_heading}}</td>
-                    <td>{{$post->title_body}}</td>
-                    <td>{{$post->authour}}</td>
-                    <td>{{$post->category}}</td>
-                    <td>{{ $post->track_id }}</td>
+                    <td>{{$post->course}}</td>
+                    <td>{{$post->task_title}}</td>
+                    <td>{{$post->task_points}}</td>
+                   
                      <td>
 
 
 
 
-                        <a href="{{ route('posts.show', ['post'=>$post->id])}}" title="show">
+                        {{--  <a href="{{ route('posts.show', ['post'=>$post->id])}}" title="show">
                             <i class="btn btn-danger fas fa-eye"></i>
                         </a>
                         
@@ -99,7 +98,7 @@
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger btn-sm p-0"><i class="btn btn-danger fas fa-trash-alt" ></i></button>
-                        </form>
+                        </form>  --}}
 
 
 
@@ -109,7 +108,7 @@
 
                 </tr>
             @endforeach
-        </table>  --}}
+        </table>
     </div>
 
 @endsection

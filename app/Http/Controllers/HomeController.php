@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Users;
 use App\Models\Stages;
+use App\Models\Generalpost;
 use App\Models\Posts;
 
 use App\Notifications\TaskCompleted;
@@ -17,11 +18,14 @@ class HomeController extends Controller
         $stages = Stages::all();
 
         $posts = Posts::where('track_id',auth()->user()->track_id)->get();
-        $allposts = Posts::all();
+        $allposts = Posts::orderBy('updated_at', 'desc')->get();
+        
+        $generalposts= Generalpost::all();
         return view('home')->with([
             'stages' => $stages,
             'posts' => $posts,
-            'allposts' => $allposts
+            'allposts' => $allposts,
+            'generalposts' =>  $generalposts
         ]);
     }
 }

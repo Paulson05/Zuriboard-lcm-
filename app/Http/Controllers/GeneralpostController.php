@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Generalpost;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class GeneralpostController extends Controller
 {
@@ -13,8 +14,11 @@ class GeneralpostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-       return view('admin.generalpost.index');
+    { 
+        $generalposts= Generalpost::all();
+       return view('admin.generalpost.index')->with([
+           'generalposts' =>  $generalposts
+       ]);
     }
 
     /**

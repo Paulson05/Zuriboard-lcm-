@@ -113,6 +113,23 @@
                             </tr>
                             </thead>
                             <tbody>
+
+                                <td>
+                                    <h1 style="font-size: 10px; color:red;">General</h1>
+                                </td>
+                                @foreach($generalposts as $post)
+                            <tr  >
+                               
+                                <td>{{$post->course}}</td>
+                                <td>{{$post->task_title}}</td>
+                                <td>{{$post->task_points}}</td>
+                                <td>graded(2.00)</td>
+                                 <td>{{ $post->created_at->addDays(3)->diffForHumans()}}</td>
+                                <td>view</td>
+                                <td></td>
+        
+                            </tr>
+                            @endforeach
                                 <td>
                                     <h1 style="font-size: 10px; color:red;">PHP</h1>
                                 </td>
@@ -126,8 +143,10 @@
                                
         
                                 <td >{{$post->category}}</td>
-                                <td> <i class="btn btn-danger fas fa-eye"></i></td>
-        
+                                <td>graded(2.00)</td>
+                                 <td>not submitted</td>
+                                <td>view</td>
+                                <td></td>
 
 
 
