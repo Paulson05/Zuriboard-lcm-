@@ -7,6 +7,8 @@ use App\Http\Controllers\PostsController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\StageController;
+use App\Http\Controllers\GeneralpostController;
+
 use Illuminate\Support\Facades\Route;
 
 //use RealRashid\SweetAlert\Facades\Alert;
@@ -52,6 +54,8 @@ Route::post('admin/post/track', [AdminController::class, 'postTrack'])->name('ad
 
 
 Route::resource('posts', PostsController::class)->only(['index','store','show','update','destroy','edit',  ]);
+Route::resource('generalposts', GeneralpostController::class)->only(['index','store','show','update','destroy','edit',  ]);
+
 Route::resource('tasks', TaskController::class)->only(['index','store','show','update','destroy','edit',  ]);
 Route::resource('teams', TeamController::class)->only(['index','store','show','update','destroy','edit',  ]);
 Route::resource('stages', StageController::class)->only(['index','store','show','update','destroy','edit',  ]);
