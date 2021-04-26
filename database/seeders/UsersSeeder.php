@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 use Database\Factories\UsersFactory;
+use App\Models\Users;
 use Illuminate\Database\Seeder;
 
 class UsersSeeder extends Seeder
@@ -13,8 +14,8 @@ class UsersSeeder extends Seeder
      */
     public function run()
     {
-        // UsersFactory::times(20)->create();
-         \App\Models\User::factory(10)->create();
+        // UsersFactory::times(10)->create();
+         \App\Models\Users::factory(3)->create();
         
     }
 }

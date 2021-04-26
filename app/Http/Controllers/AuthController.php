@@ -7,6 +7,7 @@ use App\Models\Tasks;
 use App\Models\Teams;
 use App\Models\Users;
 use App\Models\Tracks;
+use App\Models\Generalpost;
 
 use App\Models\Jointeams;
 use App\Models\Stages;
@@ -21,12 +22,17 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
-// public  function index(){
-//     $stages = Stages::all();
-//     return view('auth.dashboard')->with([
-//         'stages' => $stages
-//     ]);
-// }
+public  function index(){
+    $stages = Stages::all();
+           
+    $generalposts= Generalpost::all();
+    $posts = Posts::where('track_id',auth()->user()->track_id)->get();
+    return view('auth.dashboard')->with([
+        'stages' => $stages,
+        'posts' => $posts,
+        'generalposts' =>  $generalposts
+    ]);
+}
 
     public  function getRegister(){
           $user = Users::all();
@@ -130,11 +136,19 @@ class AuthController extends Controller
 
     
     public function dashboard(){
+       
         $posts = Posts::all();
         $stages = Stages::all();
+        
+        $allposts = Posts::orderBy('updated_at', 'desc')->get();
+               
+        $generalposts= Generalpost::all();
         return view('auth.dashboard')->with([
             'stages' => $stages,
-            'posts' => $posts
+                   'allposts' => $allposts,
+            'posts' => $posts,
+        'generalposts' =>  $generalposts
+
         ]);
     }
 }

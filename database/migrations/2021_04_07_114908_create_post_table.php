@@ -19,8 +19,12 @@ class CreatePostTable extends Migration
              $table->bigInteger('track_id');
             $table->string('title_heading');
             $table->string('title_body');
+            $table->string('task_title');
+            $table->string('task_point');
             $table->string('authour');
             $table->string('category');
+            $table->dateTime('deadline');
+
             $table->timestamps();
         });
     }

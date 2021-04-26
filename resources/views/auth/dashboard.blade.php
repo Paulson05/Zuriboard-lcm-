@@ -124,7 +124,7 @@
                                 <td>{{$post->task_title}}</td>
                                 <td>{{$post->task_points}}</td>
                                 <td>graded(2.00)</td>
-                                 <td>{{ $post->created_at->addDays(3)->diffForHumans()}}</td>
+                                 <td>{{ $post->created_at->addDays(2)->diffForHumans()}}</td>
                                 <td>view</td>
                                 <td></td>
         
@@ -144,7 +144,7 @@
         
                                 <td >{{$post->category}}</td>
                                 <td>graded(2.00)</td>
-                                 <td>not submitted</td>
+                                 {{--  <td>{{Carbon::parse($post->deadline)->diffforhuman()}}</td>  --}}
                                 <td>view</td>
                                 <td></td>
 

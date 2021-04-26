@@ -35,38 +35,41 @@
                             </div>
                             <div class="col-xs-4 col-sm-4 col-md-6">
                                 <div class="form-group">
-                                    <strong>AUTHOUR</strong>
+                                    <strong>taskpoint</strong>
                                     <input type="text" name="task_point" class="form-control">
                                 </div>
                             </div>
                             <div class="col-xs-4 col-sm-4 col-md-6">
                                 <div class="form-group">
-                                    <strong>Category</strong>
-                                    <input type="text" name="status" class="form-control">
+                                    <strong>task title</strong>
+                                    <input type="text" name="task_title" class="form-control">
                                 </div>
                             </div>
+                         
                             <div class="col-xs-6 col-sm-6 col-md-6">
                                 <div class="form-group">
-                                    <strong>Body</strong>
-                                    <input type="text" name="deadline" class="form-control">
+                                    <strong>Dealine</strong>
+                                    <input type="datetime-local" name="deadline" class="form-control">
                                 </div>
                             </div>
-                            <div class="col-xs-6 col-sm-6 col-md-6">
-                                <div class="form-group">
-                                    <strong>Body</strong>
-                                    <input type="text" name="title_body" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-6 col-md-6">
-                                <div class="form-group">
-                                    <strong>Body</strong>
-                                    <input type="text" name="title_body" class="form-control">
-                                </div>
-                            </div>
+                           
+                           
                             <div class="col-xs-6 col-sm-6 col-md-6">
                                 <div class="form-group">
                                     <strong>Body</strong>
                                     <input type="text" name="title_body" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <strong>Authour</strong>
+                                    <input type="text" name="authour" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <strong>category</strong>
+                                    <input type="text" name="category" class="form-control">
                                 </div>
                             </div>
                             
