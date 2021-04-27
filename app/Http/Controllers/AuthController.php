@@ -23,6 +23,7 @@ use Illuminate\Http\Request;
 class AuthController extends Controller
 {
 public  function index(){
+    dd('ok1');
     $stages = Stages::all();
            
     $generalposts= Generalpost::all();
@@ -136,7 +137,7 @@ public  function index(){
 
     
     public function dashboard(){
-       
+        dd('authcontroller');
         $posts = Posts::all();
         $stages = Stages::all();
         
@@ -144,10 +145,10 @@ public  function index(){
                
         $generalposts= Generalpost::all();
         return view('auth.dashboard')->with([
-            'stages' => $stages,
+                   'stages' => $stages,
                    'allposts' => $allposts,
-            'posts' => $posts,
-        'generalposts' =>  $generalposts
+                   'posts' => $posts,
+                  'generalposts' =>  $generalposts
 
         ]);
     }

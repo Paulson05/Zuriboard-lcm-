@@ -16,6 +16,7 @@ class HomeController extends Controller
     public function index(){
         // $users = users::find(1);
         // Users::find(1)->notify(new TaskCompleted);
+        // dd('home controller');
         $stages = Stages::all();
 
         $posts = Posts::where('track_id',auth()->user()->track_id)->get();

@@ -144,7 +144,7 @@
         
                                 <td >{{$post->category}}</td>
                                 <td>graded(2.00)</td>
-                                 {{--  <td>{{Carbon::parse($post->deadline)->diffforhuman()}}</td>  --}}
+                                 <td>{{Illuminate\Support\Carbon::parse($post->deadline)->diffForHumans()}}</td>
                                 <td>view</td>
                                 <td></td>
 
