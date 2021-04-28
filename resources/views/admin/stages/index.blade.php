@@ -75,10 +75,10 @@
 
 
 
-                    {{--  <a href="{{route('teams.show', ['team'=>$team->id])}}" title="show">  --}}
+                    <a href="" title="show">
                         <i class="btn btn-danger fas fa-eye"></i>
                     </a>
-                    <a href="" >
+                    <a href="{{ route('stages.edit', ['stage' => $stage->id]) }}" >
                         <i class="btn btn-danger fas fa-edit" ></i>
                     </a>
                     <form style="display: inline-block" method="post" action="{{route('stages.destroy', ['stage' => $stage->id]) }}" >

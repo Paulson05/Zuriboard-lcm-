@@ -137,7 +137,7 @@ public  function index(){
 
     
     public function dashboard(){
-        dd('authcontroller');
+
         $posts = Posts::all();
         $stages = Stages::all();
         
