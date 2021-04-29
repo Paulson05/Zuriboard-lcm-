@@ -22,28 +22,29 @@
                 <table class="">
                     <thead>
                     <tr class="t-row-text">
-                        <td>TRACK</td>
-                        <td>COURSE NAME</td>
+                        <td>COURSE</td>
+                        <td>TASK TITLE</td>
                         <td>DESCRIPTION</td>
-                        <td>TRACK</td>
-                        <td>COURSE NAME</td>
-                        <td>DESCRIPTION</td>
-                        <td>COURSE NAME</td>
-                        <td>DESCRIPTION</td>
+                        <td>TASK FILE</td>
+                        <td>TASK POINT</td>
+                        <td>TIME STATUS</td>
+                        <td>SUBMISSION STATUS</td>
+                        <td>....</td>
 
                     </tr>
                     </thead>
                     <tbody>
-                 @foreach($tasks as $task)
+                 @foreach($posts as $post)
                     <tr class="t-row">
-                        <td>{{$task->id}}</td>
-                        <td>{{$task->course}}</td>
-                        <td>{{$task->task_title}}</td>
-                        <td>{{$task->description}}</td>
-                        <td>{{$task->task_file}}</td>
-                        <td>{{$task->task_points}}</td>
-                        <td>{{$task->time_status}}</td>
-                        <td>{{$task->submission_status}}</td>
+                       
+                        <td>{{$post->course}}</td>
+                        <td>{{$post->task_title}}</td>
+                        <td>{{$post->task_points}}</td>
+                        <td>graded(2.00)</td>
+                         <td>{{ $post->created_at->addDays(2)->diffForHumans()}}</td>
+                        <td>view</td>
+                        <td></td>
+
                     </tr>
 
                  @endforeach

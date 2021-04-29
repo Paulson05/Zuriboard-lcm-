@@ -77,9 +77,9 @@ public  function index(){
     }
 
     public  function  tasks(){
-    $tasks = Tasks::all();
+    $posts = Posts::where('track_id',auth()->user()->track_id)->get();
     return view ('auth.tasks')->with([
-        'tasks' => $tasks
+        'posts' => $posts
     ]);
     }
 
