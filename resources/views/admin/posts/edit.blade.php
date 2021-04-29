@@ -7,7 +7,8 @@
                 <!-- Modal body -->
                 <div class="modal-body">
  
-                    <form action="{{ route('posts.edit',['post' => $post->id]) }}" method="post" enctype= "multipart/form-data" >
+                    <form action="{{ route('posts.update',['post' => $post->id]) }}" method="post" enctype= "multipart/form-data" >
+                        @method('PUT')
                         @csrf
 
                         <div class="row">

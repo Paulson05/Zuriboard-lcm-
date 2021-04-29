@@ -17,7 +17,7 @@
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <form action="{{ route('admin.posttrack') }}" method="post" enctype= "multipart/form-data" >
+                    <form action="" method="post" enctype= "multipart/form-data" >
                         @csrf
 
                         <div class="row">
@@ -35,7 +35,7 @@
 
 
                         <div class="col-xs-12 col-sm-12 col-md-8 ">
-                            <button type="submit" class="btn btn-primary">Create stage</button>
+                            <button type="submit" class="btn btn-primary">Create track</button>
                         </div>
                     </form>
                 </div>
@@ -79,7 +79,8 @@
                     {{--  <a href="{{route('teams.show', ['team'=>$team->id])}}" title="show">  --}}
                         <i class="btn btn-danger fas fa-eye"></i>
                     </a>
-                    <a href="" >
+                    <a href="{{ route('track.edit', ['track'=> $track->id]) }}" >
+
                         <i class="btn btn-danger fas fa-edit" ></i>
                     </a>
                     

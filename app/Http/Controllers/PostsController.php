@@ -41,9 +41,12 @@ class PostsController extends Controller
         ]);
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, Posts $post)
     {
+        $post->update($request->only(['title_heading', 'title_body','task_title', 'task_point','authour', 'deadline','category', 'track_id']));
 
+        return redirect()->route('posts.index')
+            ->with('success', 'post updated sucessfully!');
     }
 
     public function destroy(Request $request, Posts $post)

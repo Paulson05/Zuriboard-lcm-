@@ -6,6 +6,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\TrackController;
+
 use App\Http\Controllers\StageController;
 use App\Http\Controllers\GeneralpostController;
 
@@ -49,6 +51,7 @@ Route::get('admin/usersprofile', [AdminController::class, 'usersProfile'])->name
 Route::post('admin/post/usersprofile', [AdminController::class, 'postUsersprofile'])->name('admin.postsusersprofile');
 Route::get('admin/track', [AdminController::class, 'track'])->name('admin.track');
 Route::post('admin/post/track', [AdminController::class, 'postTrack'])->name('admin.posttrack');
+Route::resource('track', TrackController::class)->only(['index','store','show','update','destroy','edit',  ]);
 
 
 
