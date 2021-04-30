@@ -13,7 +13,8 @@
             </div>
             <div class="row">
                 <div class="col-4">
-                    <h1 style="font-size: 10px;">Dashboad->post</h1>
+                    <h1 style="font-size: 10px;"> <a href="{{ route('auth.dashboard') }}">Dashboad</a>->post</h1>
+                    
                 </div>
 
             </div>

@@ -23,7 +23,7 @@ use Illuminate\Http\Request;
 class AuthController extends Controller
 {
 public  function index(){
-    dd('ok1');
+   
     $stages = Stages::all();
            
     $generalposts= Generalpost::all();
@@ -77,7 +77,7 @@ public  function index(){
     }
 
     public  function  tasks(){
-    $posts = Posts::where('track_id',auth()->user()->track_id)->get();
+    $posts = Posts::where('track_id',auth()->user()->track_id)->paginate(10);
     return view ('auth.tasks')->with([
         'posts' => $posts
     ]);

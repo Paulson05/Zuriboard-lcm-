@@ -13,7 +13,7 @@
              </div>
             <div class="row">
                 <div class="col-4">
-                    <h1 style="font-size: 10px;">Dashboad->task</h1>
+                    <h1 style="font-size: 10px;"> <a href="{{ route('auth.dashboard') }}">Dashboad</a>->task</h1>
                 </div>
 
             </div>
@@ -53,6 +53,9 @@
 
                     </tbody>
                 </table>
+                <div class="text-center">
+                    {!! $posts->links(); !!}
+                </div>
             </div>
         </div>
     </section>
